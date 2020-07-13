@@ -6,7 +6,7 @@ The key driver of this project is to provide an operating system designed for op
 
 Why Embedded?
 -------------
-It is built by Yocto, an open-source and widely supported builder of embedded operating systems. Operating systems built through Yocto are pervasive and turn up in surprising places. From rockets to Mars rovers, Kindles and Jaguars, Yocto is everywhere. It is chosen for these projects because it is designed to be stable and secure under great pressure and in increasingly hostile environments.
+It is built by the Yocto Project, an open-source and widely supported embedded operating system builder. Operating systems built through the Yocto Project are pervasive and turn up in surprising places. From rockets to Mars cube satellites, Kindles and Jaguars, the Yocto Project is everywhere. It is chosen for these projects because it is designed to be stable and secure under great pressure and in increasingly hostile environments.
 
 Embedded does not mean restrictive; this is a common misconception. Using Yocto, the operating system can be layered with additional applications and features. This includes applications, frameworks and [SDK][sdk]s and as such, it can be made into a fully featured Network Operating System, or development environment. Granted, such OS's by default are built with a minimum of dependencies and features, but this should be seen as an advantage and not a restriction. You have freedom to make it what you want, knowing that the foundation comes from a place of security. Further, having a better understanding of the software stack running on your devices increases confidence in their ability to operate under pressure.
 
