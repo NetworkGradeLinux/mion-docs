@@ -1,3 +1,5 @@
+![mion Logo](images/00_mion_logo_rgb_symbol_colors_small.png)
+
 mion
 ====
 Mion is an embedded operating system designed for network devices with security and supportability at it's core.
