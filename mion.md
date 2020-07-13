@@ -15,11 +15,6 @@ More generally, minimal operating systems:
 - Are intrinsically easier to understand;
 - Reduce the attack surface leveraged by malfeasors.
 
-> Todo:
-> -----
-> - Discuss update mechanisms, tying into security aspect
-> - Discuss containerisation (specify OCI compliance) aspects tying to flexibility and update aspect
-> - Make sure list of other uses is correct and supply supoorting references
 
 What it is Not
 --------------
