@@ -28,8 +28,7 @@ Mion is not a [Network Operating System (NOS)][nos-wiki]. A NOS typically compri
 Arguably, the definition of a NOS is blurred. For example, Open Network Linux was marketed as a NOS but does not contain applications that provide networking functionality. It does however include platform interface libraries ([ONLP][onlp-api]).
 
 
-References
-==========
+
 [nos-wiki]: https://en.wikipedia.org/wiki/Network_operating_system "Wikipedia: Network Operating System"
 [debian]: https://www.debian.org/ "Debian: The universal operating system"
 [nic]: https://en.wikipedia.org/wiki/Network_interface_controller "Wikipedia: Network interface controller"
