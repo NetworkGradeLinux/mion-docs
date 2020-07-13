@@ -23,7 +23,7 @@ More generally, minimal operating systems:
 
 What it is Not
 --------------
-Mion is not a [Network Operating System (NOS)][nos-wiki]. A NOS typically comprises a base operating system (such as [Debian][debian), which may or may not be modified, with networking applications on top. These applications process network traffic either directly from [NIC][nic]s or by interfacing with device specific hardware.
+Mion is not a [Network Operating System (NOS)][nos-wiki]. A NOS typically comprises a base operating system (such as [Debian][debian]), which may or may not be modified, with networking applications on top. These applications process network traffic either directly from [NIC][nic]s or by interfacing with device specific hardware.
 
 Arguably, the definition of a NOS is blurred. For example, Open Network Linux was marketed as a NOS but does not contain applications that provide networking functionality. It does however include platform interface libraries ([ONLP][onlp-api]).
 
