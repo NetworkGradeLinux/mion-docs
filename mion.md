@@ -1,4 +1,4 @@
-![mion Logo](images/00_mion_logo_rgb_symbol_colors.png)
+![mion Logo](images/00_mion_logo_rgb_symbol_colors_small.png)
 
 mion
 ====
