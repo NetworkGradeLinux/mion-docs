@@ -38,7 +38,7 @@ In order to properly provide this function, the following occurs:
 
 The reason for this appears to be that the AIM module can intercept `onlpdump_main` and perform perform initialisation of the other dependee modules.
 
-![sub](https://user-images.githubusercontent.com/6354369/88066791-15bc8300-cb66-11ea-8253-ee09f6bca57e.png)
+![sub](images/module_sub.png)
 
 
 Briefly:
