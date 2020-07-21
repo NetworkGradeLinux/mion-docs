@@ -6,11 +6,11 @@ ONL builds binaries through the "__AIM__" builder and with a series of static an
 
 Very broadly, there are two concepts which have been separated from one another; modules and targets. 
 
-Modules are not buildable in their own right; they are a collection of sources that are buildable by targets. The reason for this seems to be that ONL takes an "aspect oriented" approach to builds -- actual targets contain definitions that are substituted in the modules which are then built through AIM which, as far as we can tell, is at core of the build system.
+Modules are not buildable in their own right; they are a collection of sources that are buildable by targets. The reason for this seems to be that ONL takes an "aspect oriented" approach to builds -- actual targets contain definitions that are substituted in the modules which are then built through AIM which, as far as we can tell, is at the core of the build system.
 
-A target is a Makefile which defines a buildable binary, and declares various definitions, compiler and linker flags, other library dependencies, and the modules on which it depends on. The modules are compiled statically with the definitions supplied by the target and then everything is linked together.
+A target is a Makefile which defines a buildable binary, declaring various definitions, compiler and linker flags, other library dependencies, and the modules on which it depends on. The modules are compiled statically with the definitions supplied by the target and then everything is linked together.
 
-A "simple" example of this is `onlpdump` (or `onlps` depending on your version). `onlpdump` is command line application that iterates and displays chassis information. As such it requires knowledge of the concrete ONLP platform. It requires the following source modules:
+A "simple" example of this is `onlpdump` (or `onlps` depending on your version). `onlpdump` is a command line application that iterates through and displays chassis information. As such it requires knowledge of the concrete ONLP platform. It requires the following source modules:
 * __AIM__: _The target builder_
 * __IOF__: _Output formatting utility for tree-like structures_
 * __onlp__: _Abstractions and base sources from which platform modules include/implement_
