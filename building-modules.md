@@ -46,5 +46,5 @@ Briefly:
 `packages/base/any/onlp/src/onlp/module/src/onlp_main.c` and the function `onlpdump_main`.
 * The name of this function is assigned to the gcc build flags for onlp as AIM_CONFIG_AIM_MAIN_FUNCTION.
 * The actual main function is in `sm/infra/modules/AIM/module/src/aim_modules_init.c`
-* `int main(char, char const *[])` contains dereferences the AIM_CONFIG_AIM_MAIN_FUNCTION definitions.
+* `int main(char, char const *[])` substitutes AIM_CONFIG_AIM_MAIN_FUNCTION and calls it.
 
