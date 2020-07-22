@@ -6,7 +6,7 @@ ONL builds binaries through the "__AIM__" builder and with a series of static an
 
 Very broadly, there are two concepts which have been separated from one another; modules and targets. 
 
-Modules are not buildable in their own right; they are a collection of sources that are buildable by targets. The reason for this seems to be that ONL takes an "aspect oriented" approach to builds -- actual targets contain definitions that are substituted in the modules which are then built through AIM which, as far as we can tell, is at the core of the build system.
+Modules are not buildable in their own right; they are a collection of sources that are buildable by targets. The reason for this seems to be that ONL takes an "aspect oriented" approach to builds -- actual targets contain definitions that are substituted in the modules which are then built through __AIM__ which, as far as we can tell, is at the core of the build system.
 
 A target is a Makefile which defines a buildable binary, declaring various definitions, compiler and linker flags, other library dependencies, and the modules on which it depends on. The modules are compiled statically with the definitions supplied by the target and then everything is linked together.
 
@@ -25,18 +25,18 @@ A "simple" example of this is `onlpdump` (or `onlps` depending on your version).
 * __ELS__: _Editline Server. Hosts command line utilities_
 * __onlp_platform_defaults__: _Default platform implementation, believed to be used to declare and link to symbols defined by the actual implementation_
 
-When the target is built, the module dependencies are established by the build system, scanning the source tree for module definitions. These are defined in Makefiles in the module's source tree. For `onlpdump`, this is:
+When the target is built, the module dependencies are established by the build system, scanning the source tree for module definitions. These are defined in Makefiles in the module's source tree. For `onlpdump`, which is coupled to the ONLP platforms, is located at:
 `packages/platforms/stordis/x86-64/bf2556x-1t/onlp/builds/onlpdump/Makefile`
 
-This may not be very informative, however. ONL, since sometime last year (2019), uses templates to make it easier to create module definitions. The template for `onlpdump` is located in `packages/base/any/onlp/builds/platform/onlps.mk`
+This may not be very informative, however. ONL, since sometime last year (2019), uses templates to make it easier to create various platform module definitions. The template for `onlpdump` is located in `packages/base/any/onlp/builds/platform/onlps.mk`
 
-As was mentioned earlier, modules are built by and included by targets, supplying various definitions to select functionality in the modules used. An example of such a substitution is how the `main` function is provided. The `main` is not contained within the ONLP source code; instead it is defined in the __AIM__ module.
+As was mentioned earlier, modules are built by and included by targets, supplying various definitions to select functionality in the modules used. An example of such a substitution is how the `main` function is provided for the onlpdump executable. The `main` is not contained within the ONLP source code; instead it is defined in the __AIM__ module.
 In order to properly provide this function, the following occurs:
 * The `onlpdump` target Makefile provides a C flag defining `AIM_CONFIG_AIM_MAIN_FUNCTION`, which points to:
 * The `onlpdump_main(int, char const *[])` in the ONLP sources, which is:
-* Substituted and called by `main(int, char const*[])` in the AIM sources.
+* Substituted and called by `main(int, char const*[])` in the __AIM__ sources.
 
-The reason for this appears to be that the AIM module can intercept `onlpdump_main` and perform perform initialisation of the other dependee modules.
+The reason for this appears to be that the __AIM__ module can intercept `onlpdump_main` and perform perform initialisation of the other dependee modules.
 
 ![sub](images/module_sub.png)
 
