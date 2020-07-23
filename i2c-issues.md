@@ -31,7 +31,7 @@ by a vendor, they may not get a version of the file they were expecting,
 depending on the kernel version and whether `i2c-tools` is installed.
 
 While ONLP has a prepocessor conditional that can switch out which headers are
-included (ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER), it's not strictly speaking
+included (`ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER`), it's not strictly speaking
 "custom". The default is to use the custom header definitions
 (`linux/i2c-devices.h`), which as we have discussed, is already baked into the ONL 
 builder docker image.
