@@ -1,15 +1,25 @@
 I2C Issues
-----------
-ONLP platform implmentations often rely on i2c capability to talk to various
-hardware components. However there are issues around the i2c headers, as well as
-how ONL deals with this.
+==========
 
+ONLP platform implmentations often rely on i2c capability to talk to various
+hardware components. This functionality has changed greatly amongst kernel 
+versions, which ONL has been forced to handle. While Mion provides a fixed kernel,
+platform mainatiners will have to:
+
+* Make sure any implementations that use i2c headers directly are using the correct
+  versions;
+* For `onlps`/`onlpdump` and platform targets, use the templates, or pass `-li2c`
+  to to targets using `GLOBAL_LINK_FLAGS`.
+
+
+Detail
+------
 The linux kernel provides two files of interest: `'linux/i2c.h` and 
 `linux/i2c-dev.h`. These were present in the initial commit of kernel 2.6.12 to
 GitHub which was released in 2005.
 
 The chief problem is that the `i2ctools` development library header file also
-provides this file, with them defining different things throughout their 
+provides `linux/i2c-dev.h`, with them defining different things throughout their 
 history. This is all fixed now, with `i2ctools` providing the `i2c/smbus.h` file
 instead, and (I believe), most of the other definitions being handled by the
 kernel headers.
@@ -36,8 +46,9 @@ included (`ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER`), it's not strictly speaking
 (`linux/i2c-devices.h`), which as we have discussed, is already baked into the ONL 
 builder docker image.
 
-Further, some of the structures may be defined multiple times. The example that has
-particular issues with ONL is `union i2c_smbus_data` which is defined in both:
+Further, some of the structures may be defined multiple times. The example that
+has particular issues with ONL is `union i2c_smbus_data` which is defined in
+both:
 * `linux/i2c.h`: in kernel since at least 2.6.12 going by GitHub history.
 * `linux/i2c-dev.h`: provided by i2c-tools (libi2c-dev) version 3.
 
@@ -45,18 +56,40 @@ At least one vendor has declared a source file containing their own definition o
 `union i2c_smbus_data`, rather than go through the hassle of dealing with it
 externally.
 
-
 Finally, as it compares to Mion, we are not building the same kernels is
 ONL, and we are not using the same packaging, and therefore, ONL's solution may
 not work (this is platform dependent).
 
-The most straightforward way to handle this would be to use the kernel for 
-straight `i2c` functions, and use `i2ctools` for `smbus` e.g. `i2c_smbus_write_quick`.
-However, while this is easy enough for us to do as maintainers of the Stordis
-platforms, it would require compliance from other interested vendors. The fact that
-Mion using a fixed kernel mey be an advantage -- there is only one real
-implementation.
+The recipes for Mion, with the kernel version being used, means that:
+* `i2c-tools` version 4 is used;
+* The linux header do not include all the `smbus` defintions (i.e., 
+  `i2c_smbus_data`) which are defined in:
+* `i2c/smbus.h`
 
-Therefore this must be handled ourselves:
-* Generate  a correct `linux/i2c-devices.h` and drop it on the `rootfs`;
-* Patch the platform to use exactly what it needs.
+Therefore:
+* We can modify the the custom header to use the expected includes:
+     #if ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER == 1
+    -#include <linux/i2c-devices.h>
+    +#include <linux/i2c-dev.h>
+    +#include <i2c/smbus.h>
+     #else
+     #include <linux/i2c-dev.h>
+     #endif
+  This way, platforms don't have to update the i2c definitions everywhere.
+  Platforms that don't use the templates will have to add `-li2c` to the 
+  `GLOBAL_LINK_LIBS` in their Makefiles for `onlpdump`/`onlps` and their platform
+  library target.
+* Because i2c-tools 2 requires a library `libi2c0`, we need to add the relevant
+  linker flag to various targets. 
+    * For platform code, this can either be done in the ONL provided templates
+      (and therefore no changes to platform code), or if not, altered in the
+      platform target makefiles themselves. The templates can be found at 
+      `packages/base/any/onlp/builds/platform`.
+    * For platform independent targets (e.g., `onlpd`), their Makefiles will also
+      need to be updated. These are located in their respective directories at
+      `packages/base/any/onlp/builds`
+    * Finally, any additional targets inside BigCode or Infra will need to be
+      updated, but these are non-functional in the sense that they will be for
+      things like unit-tests. The code that these repositories provide are modules
+      and apart from testing, aren't really supposed to build themselves.
+  
