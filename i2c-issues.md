@@ -68,13 +68,15 @@ The recipes for Mion, with the kernel version being used, means that:
 
 Therefore:
 * We can modify the the custom header to use the expected includes:
-     #if ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER == 1
-    -#include <linux/i2c-devices.h>
-    +#include <linux/i2c-dev.h>
-    +#include <i2c/smbus.h>
-     #else
-     #include <linux/i2c-dev.h>
-     #endif
+
+       #if ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER == 1
+      -#include <linux/i2c-devices.h>
+      +#include <linux/i2c-dev.h>
+      +#include <i2c/smbus.h>
+       #else
+       #include <linux/i2c-dev.h>
+       #endif
+     
   This way, platforms don't have to update the i2c definitions everywhere.
   Platforms that don't use the templates will have to add `-li2c` to the 
   `GLOBAL_LINK_LIBS` in their Makefiles for `onlpdump`/`onlps` and their platform
