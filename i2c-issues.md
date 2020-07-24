@@ -7,7 +7,7 @@ versions, which ONL has been forced to handle. While Mion provides a fixed kerne
 platform mainatiners will have to:
 
 * Make sure any implementations that use i2c headers directly are using the correct
-  versions;
+  versions: `i2c/smbus.h`, `linux/i2c-dev.h`;
 * For `onlps`/`onlpdump` and platform targets, use the templates, or pass `-li2c`
   to to targets using `GLOBAL_LINK_FLAGS`.
 
