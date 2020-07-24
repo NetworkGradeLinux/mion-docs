@@ -3,14 +3,15 @@ I2C Issues
 
 ONLP platform implmentations often rely on i2c capability to talk to various
 hardware components. This functionality has changed greatly amongst kernel 
-versions, which ONL has been forced to handle. While Mion provides a fixed kernel,
-platform mainatiners will have to:
+versions, which ONL has been forced to handle. Because Mion provides a fixed
+kernel, this has platform maintainers will have to:
 
 * Make sure any implementations that use i2c headers directly are using the correct
   versions: `i2c/smbus.h`, `linux/i2c-dev.h`;
 * For `onlps`/`onlpdump` and platform targets, use the templates, or pass `-li2c`
   to to targets using `GLOBAL_LINK_FLAGS`.
 
+BISDN established the majority of changes in this case.
 
 Detail
 ------
@@ -67,15 +68,15 @@ The recipes for Mion, with the kernel version being used, means that:
 * `i2c/smbus.h`
 
 Therefore:
-* We can modify the the custom header to use the expected includes:
+* We can modify the the custom header to use the expected includes in
+  `packages/base/any/onlp/src/onlplib/module/src/i2c.c`:
 
-       #if ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER == 1
-      -#include <linux/i2c-devices.h>
-      +#include <linux/i2c-dev.h>
-      +#include <i2c/smbus.h>
-       #else
-       #include <linux/i2c-dev.h>
-       #endif
+      #if ONLPLIB_CONFIG_I2C_USE_CUSTOM_HEADER == 1
+      #include <linux/i2c-dev.h>
+      #include <i2c/smbus.h>
+      #else
+      #include <linux/i2c-dev.h>
+      #endif
      
   This way, platforms don't have to update the i2c definitions everywhere.
   Platforms that don't use the templates will have to add `-li2c` to the 
