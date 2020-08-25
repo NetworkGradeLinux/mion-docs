@@ -1,9 +1,21 @@
-# Mion Quickstart Guide
-Reference information for building Mion OS if you are already familiar with 
-the Yocto Project and Open Embedded. See our main documentation for more 
-in-depth information and help getting started.
+---
+layout: default
+title: Quickstart Guide
+nav_order: 2
+has_children: false
+---
 
-### Table of Contents
+
+# Mion Quickstart Guide
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+<!-- ### Table of Contents
 [Obtaining Mion](#obtaining-mion)
 
 [System Profiles](#system-profiles)
@@ -14,7 +26,7 @@ in-depth information and help getting started.
 
 [ONIE Platform](#onie-platform)
 
-[Basic Commands](#basic-commands)
+[Basic Commands](#basic-commands) -->
 
 ## Obtaining Mion
 
@@ -87,30 +99,30 @@ The ONIE profiles cover a machine and ONLP version.
 The following commands uses the `-T` argument which allows for multiple
 pairs of `System Profile:Application Profile`.
 
-### Example:
+## Examples:
 
 `/scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv2 -T mion-native-mender:mion-host-prod-mender`
 `-M stordis-bf2556-1t` specifies the machine, the first set specified with `-T` 
 builds a guest container with support for ONLPv2. The second builds a mion OS
 running on the machine, and an application profile with mender support.
 
-#### To Build host filesystem with ONLPv1 Guest:
+### To Build host filesystem with ONLPv1 Guest:
 
 `./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv1 -T mion-native-onie-new:mion-host-prod`
 
-#### To Build host filesystem with ONLPv2 Guest:
+### To Build host filesystem with ONLPv2 Guest:
 
 `./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv2 -T mion-native-onie-new:mion-host-prod`
 
-#### To Build ONIE installer for ONLPv1:
+### To Build ONIE installer for ONLPv1:
 
 `./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv1 -T mion-native-onie:mion-host-onie-onlpv1`
 
-#### To Build ONIE installer for ONLPv2:
+### To Build ONIE installer for ONLPv2:
 
 `./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv2 -T mion-native-onie:mion-host-onie-onlpv2`
 
-#### To drop into a development shell and use bitbake directly:
+### To drop into a development shell and use bitbake directly:
 `./scripts/build.py --shell`
 > You can also specify machine with `-M`, system profiles with `-S` and
 application profiles with `-A`. The '`-T` option can still be used, but can

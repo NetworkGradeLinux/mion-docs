@@ -23,10 +23,10 @@ email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Mion is an embedded operating system designed for network devices with
   security and supportability at it's core.
-# baseurl: "/mion" # the subpath of your site, e.g. /blog
-baseurl: "/" # the subpath of your site, e.g. /blog
-# url: "https://committhis.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
-url: "http://127.0.0.1" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/mion" # the subpath of your site, e.g. /blog
+# baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://committhis.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "http://127.0.0.1" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -37,7 +37,7 @@ plugins:
 
 nav_sort: case_insensitive
 
-logo: "images/mion-header-logo.png"
+logo: "assets/images/mion-header-logo.png"
 color_scheme: mion
 # Exclude from processing.
 # The following items will not be processed, by default.
