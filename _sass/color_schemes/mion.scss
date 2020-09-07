@@ -1,18 +1,18 @@
-$link-color: #009d78;
 
 // .side-bar > a {
 //     color: #fff;
 // }
 
-.float-left {
-    float: left;
-    margin-right: 20px;
-}
 
-.h2-date {
-    color: #aaa;
-    font-size: 0.8em;
-}
+
+$mion-green: #009d78;
+$mion-orange: #ee7637;
+
+$mion-green-accessible: #008d5f;
+$mion-orange-accessible: #c25700;
+
+$link-color: #008550; // $mion-green-accessible;
+
 
 // .side-bar {
 //     background-color: #ee7637 !important;
@@ -32,6 +32,71 @@ $link-color: #009d78;
          url('../fonts/exo-2-v9-latin-regular.svg#Exo2') format('svg'); /* Legacy iOS */
   }
 
-  h1, h2, h3 {
-      font-family:  'Exo 2';
-  }
+h1, h2, h3 {
+    font-family:  'Exo 2';
+}
+
+h2, h3 {
+    color: $mion-orange-accessible !important;
+}
+
+/* Accessibility Overrides */
+
+
+.highlight .nt {
+    color: #0076b8 !important;
+}
+
+
+.highlight .nb {
+    color: #8f6c00 !important;
+}
+
+
+div.side-bar a {
+    color: #008040; // !important;
+}
+
+
+footer.site-footer {
+    color: #737074; // !important;
+}
+
+
+footer.site-footer a {
+    color: #00834c; // !important;
+}
+
+/* 
+   https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
+   https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
+*/
+.visually-hidden:not(:focus):not(:active) {
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px; 
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+
+.h2-date {
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+.btn > a {
+    color: #00834d !important;
+}

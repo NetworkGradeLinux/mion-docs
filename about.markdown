@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Mion
 permalink: /about/
 nav_order: 99
 ---
