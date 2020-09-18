@@ -6,7 +6,7 @@ has_children: false
 ---
 
 
-# Mion Quickstart Guide
+# Quickstart Guide
 {: .no_toc }
 
 ## Table of contents
