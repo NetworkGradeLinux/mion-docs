@@ -64,4 +64,4 @@ isolate applications running inside from the operating system and other applicat
 * __TSN__:	Time Sensitive Networking
 * __VNF__:	Virtualized Network Function
 * __WAN__:	Wide Area Network
-* __XCVR__: Transciever
+* __XCVR__: Transceiver
