@@ -8,15 +8,10 @@ nav_order: 99
 Glossary
 ========
 
-Mion/Oryx
+Mion
 ---------
 * __BitBake Recipe__: Basic metadata file that describes the building of a package. Includes descriptions, locations
-* __Application Profile__: Configuration in Oryx/Mion that defines what's required to build a particular application.
-Can require and therefore be composed with other application profiles.
-* __System Profile__: Configuration in Oryx/Mion that defines a system for an application to be run on. This usually
-describes a physical device, or a `runc` container. Is associated with a __single__ application profile.
-* __`oryxcmd`__: Lightweight command line utility for managing containers in Oryx
-* __`miona`__: Lightweight command line utility for managing containers in Mion. A "fork" of `oryxcmd`
+* __`miona`__: Lightweight command line utility for managing containers in Mion.
 
 
 General
