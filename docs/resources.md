@@ -17,13 +17,6 @@ Resources
   reference platform layer for Stordis BF2556x-1t switch, with ONLPv1 support.
 
 
-[Oryx](https://www.toganlabs.com/oryx-linux/)
----------------------------------------------
-Mion is an embedded operating system based on [Oryx](https://oryx.readthedocs.io),
-which is in turn built through the [Yocto Project](https://www.yoctoproject.org/).
-* [Read the docs](https://oryx.readthedocs.io)
-
-
 [The Yocto Project](https://www.yoctoproject.org/):
 ---------------------------------------------------
 Project that helps developers create custom Linux based systems regardless of
@@ -39,6 +32,7 @@ hardware. Maintains `bitbake` and OpenEmbedded Core.
 * [Yocto Documentation](https://www.yoctoproject.org/docs/)
 * [Yocto Project Overview and Concepts Manual](https://www.yoctoproject.org/docs/3.1.2/overview-manual/overview-manual.html)
 * [Building your own recipes from first principles](https://wiki.yoctoproject.org/wiki/Building_your_own_recipes_from_first_principles) << IS THIS OUT OF DATE >>
+
 
 [OpenEmbedded](https://www.openembedded.org/wiki/Main_Page)
 -----------------------------------------------------------
