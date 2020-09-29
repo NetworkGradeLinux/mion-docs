@@ -57,6 +57,7 @@ isolate applications running inside from the operating system and other applicat
 * __RAN__:	Radio Access Network
 * __RISC__: reduced instruction set computing - https://riscv.org/
 * __SAI__:	Switch Abstraction Interface - https://github.com/opencomputeproject/SAI
+* __SDI__:	Serial Digital Interface
 * __SDM__:	Switching Database Manager
 * __SDN__:	software defined networking
 * __SONiC__: Software for Open Networking in the Cloud
