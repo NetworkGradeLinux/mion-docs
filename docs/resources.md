@@ -31,7 +31,7 @@ hardware. Maintains `bitbake` and OpenEmbedded Core.
   * Append files
 * [Yocto Documentation](https://www.yoctoproject.org/docs/)
 * [Yocto Project Overview and Concepts Manual](https://www.yoctoproject.org/docs/3.1.2/overview-manual/overview-manual.html)
-* [Building your own recipes from first principles](https://wiki.yoctoproject.org/wiki/Building_your_own_recipes_from_first_principles) << IS THIS OUT OF DATE >>
+* [Building your own recipes from first principles](https://wiki.yoctoproject.org/wiki/Building_your_own_recipes_from_first_principles)
 
 
 [OpenEmbedded](https://www.openembedded.org/wiki/Main_Page)
