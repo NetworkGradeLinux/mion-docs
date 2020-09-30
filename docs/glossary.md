@@ -11,7 +11,7 @@ Glossary
 Mion
 ---------
 * __BitBake Recipe__: Basic metadata file that describes the building of a package. Includes descriptions, locations
-* __`miona`__: Lightweight command line utility for managing containers in Mion.
+* __`srunc`__: Simple `runc`; lightweight command line utility for managing containers in Mion.
 
 
 General
