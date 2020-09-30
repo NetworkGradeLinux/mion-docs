@@ -8,11 +8,6 @@ nav_order: 99
 About
 =====
 
-mion is based on the mion embedded operating system from 
-[Togán Labs](https://www.toganlabs.com/), which is in turn built using the Yocto
-Project.
-
-
 Why Yocto?
 ----------
 Embedded operating systems built through the Yocto Project are extremely 
