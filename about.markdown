@@ -35,7 +35,7 @@ run in containers, even including significant portions of the OS itself. This
 also enables live updates, rollbacks, and repurposing without the need for a
 reboot.
   
-There are distinct images and configurations using [bitbake's] multiconfig for the
+There are distinct images and configurations using [bitbake's][bitbake] multiconfig for the
 base operating system and container guests. Application images are run through
 the container runtime, whereas system images are installed on bare-metal.
 System images paired with mion Board Support Packages incorporate a given
