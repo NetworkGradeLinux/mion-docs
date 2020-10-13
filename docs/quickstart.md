@@ -40,12 +40,6 @@ cd mion
 *TODO: meta-mion and meta-mion stordis are not within mion. If this is
 intentional, add git commands to fetch those layers.*
 
-## System Profiles
-System profiles set how images, including containers, are deployed and
-booted in Mion. More details on system profiles is available in the 
-[Oryx documentation](https://oryx.readthedocs.io/en/latest/building-images.html#system-profiles).
-See [Basic Commands](#basic-commands) below on how to select a system profile
-for a Mion build.
 
 ### meta-mion:
 
