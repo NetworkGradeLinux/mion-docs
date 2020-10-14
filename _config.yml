@@ -18,17 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Mion - Mini Infrastructure Operating System for Networks 
-email: community@mion.io
+title: Mion OS 
+email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Mion is an embedded operating system designed for network devices with
   security and supportability at it's core.
-baseurl: "/docs" # the subpath of your site, e.g. /blog
-url: "https://docs.mion.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/mion-docs" # the subpath of your site, e.g. /blog
+url: "https://aps-networks.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: mion_os
-github_username:  APS-Networks
+twitter_username: jekyllrb
+github_username:  jekyll
 
 
 # Build settings
