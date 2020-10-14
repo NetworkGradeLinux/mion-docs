@@ -7,7 +7,7 @@ title: Home
 nav_order: 1
 ---
 
-![mion Logo](assets/images/mion-colour-small.png){: .float-left }
+![mion Logo](/assets/images/mion-colour-small.png){: .float-left }
 # mion
 {: .fs-9 }
 
