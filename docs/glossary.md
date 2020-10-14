@@ -48,6 +48,7 @@ isolate applications running inside from the operating system and other applicat
 * __ONU__:	optical network unit
 * __OSI__ model:	Open Systems Interconnection model
 * __P4__: programming language - https://p4.org/
+* __PPTP__:	Point-to-Point Tunneling Protocol
 * __PTP__:	Precision Time Protocol
 * __RAN__:	Radio Access Network
 * __RISC__: reduced instruction set computing - https://riscv.org/
