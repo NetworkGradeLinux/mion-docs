@@ -38,8 +38,8 @@ plugins:
   - jekyll-feed
 
 nav_sort: case_insensitive
-
-logo: "assets/images/mion-header-logo.png"
+# Dirty work-around until we can find the cause for logo not appearing
+logo: "https://github.com/APS-Networks/mion-docs/blob/dunfell/assets/images/mion-header-logo.png"
 color_scheme: mion
 
 # Added extra in _includes/title.html
