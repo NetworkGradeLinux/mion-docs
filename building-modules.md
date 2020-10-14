@@ -38,7 +38,7 @@ In order to properly provide this function, the following occurs:
 
 The reason for this appears to be that the __AIM__ module can intercept `onlpdump_main` and perform perform initialisation of the other dependee modules.
 
-![sub](images/module_sub.png)
+![sub](/images/module_sub.png)
 
 
 Briefly:
