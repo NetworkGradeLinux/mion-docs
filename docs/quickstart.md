@@ -5,119 +5,82 @@ nav_order: 2
 has_children: false
 ---
 
-
-# Quickstart Guide
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
 <!-- ### Table of Contents
-[Obtaining Mion](#obtaining-mion)
 
-[System Profiles](#system-profiles)
+[Obtaining Mion](#obtaining-mion-sources)
 
-[Application Profiles](#application-profiles)
+[Basic Usage](#basic-usage) -->
 
-[Platform Profiles](#platform-profiles)
+## Obtaining mion Sources
 
-[ONIE Platform](#onie-platform)
+Before getting start, if you are new to Yocto Project development, check out [Overview and Concepts](https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html) and the [Quick Build](https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html)
+guide to set up your build host and become familiar with the workflow.
 
-[Basic Commands](#basic-commands) -->
-
-## Obtaining Mion
+If you are ready to start building mion:
 
 ```shell
 git clone --recursive git@github.com:APS-Networks/mion.git
 cd mion
-# Apply out of tree patches not yet upstreamed:
-./patches/apply.sh
+# To obtain related mion layers:
+git clone git@github.com:APS-Networks/meta-mion.git
+# Obtain the relevant hardware layer, i.e. git clone git@github.com:APS-Networks/meta-mion-stordis.git
+git clone git@github.com:APS-Networks/meta-mion-<ONL_VENDOR>.git
+# Add Bitbake Layer to bblayers.conf
 ```
 
-*TODO: meta-mion and meta-mion stordis are not within mion. If this is
-intentional, add git commands to fetch those layers.*
+The main repository for mion contains sub-modules for OpenEmbedded and Yocto Project
+ of layers which mion depends on. To properly clone them, rather than just the top directory,the --recursive argument is required.
 
+`mion` provides the build script (mc_build.sh) and configuration files in `build/conf/`.
 
-### meta-mion:
+The `meta-mion` layer provides mion distro configuration.
 
-| System Profile             | Purpose                                       |
-|----------------------------|-----------------------------------------------|
-| mion-native                | Base operating system for running containers. |
-| mion-native-onie           | Mion configured for running ONIE.             |
-| mion-native-mender         | Mion with mender updater support.             |
-| guest                      | Basic guest container.                        |
-| guest-mender-update-module | Guest container with mender updater support.  |
+## Basic Usage
 
-> system profiles can be found in `meta-mion/conf/system-profiles`.
+Before running the build, check to make sure all layers you intend on using are in `build/conf/bblayers.conf`.
+To begin, set up the build environment using the OpenEmbedded init script:
 
-## Application Profiles
-Application profiles cover specific use-cases, which often correlate to a 
-host:guest relationship. Application profiles specify package and package 
-groups, and package customization.
+```shell
+source openembedded-core/oe-init-build-env`
+```
 
-| Application Profile   | Purpose                                           |
-|-----------------------|---------------------------------------------------|
-| mion-host-onie-onlpv1 | Mion OS for onlpv1, pair with mion-guest-onlpv1   |
-| mion-guest-onlpv1     | Guest container supporting the ONLPv1 platform.   |
-| mion-host-onie-onlpv2 | Mion OS for onlpv2, pair with mion-guest onlpv2   |
-| mion-guest-onlpv2     | Guest container supporting the ONLPv2 platform.   |
-| mion-guest-test       | Guest container with testing and debugging tools. |
-| mion-host-dev         | Mion OS for development, used to create the sdk.  |
-| mion-host-prod        | Host OS for production build.                     |
-| mion-host-prod-mender | Host OS with mender support for production        |
-| mion-host-test        | Host OS for testing, pair with mion-guest-test    |
+This will place you in the build directory.
+Afterwords you can use our build script. Running `../mc_build.sh` without
+arguments displays basic usage. **In general:**
 
-> Application profiles can be found in `meta-mion/conf/application-profiles`.
+```shell
+../mc_build.sh -m <machine> -c <container config>:<container image> -h <host config>:<host_image> -d container_image
+```
 
-## Platform Profiles
-Platform profiles support Open Linux Networking Platforms(ONLP), which provides 
-an interface for network switch hardware. The platform profiles provide support 
-for stordis-bf2556c-1t under both ONLP version 1 and version 2 specifications.
+To do a "dry run" without running a build, add `-e` which emits what would have run if you ran this from bitbake.
+If you want to disable the autostarting of the container, use -d with a comma delineated list of the container image name.
 
-The platform profiles are already included into a build for the first four mion 
-application profiles in the table above.  
+If you are familiar with Yocto Project development and multiconfig and wish to use bitbake directly, see the local.conf for variables that need to be set.
 
-## ONIE Platform
+## Examples
 
-ONIE is the Open Network Installer environment, which runs on the switch hardware
-and allows for switching between different network operating systems.
+```shell
+# Builds an ONLPV1 Guest, installs it on a mender updatable host and autostarts
+../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1 -h host-mender:mion-host
 
-The ONIE profiles cover a machine and ONLP version.
+# Builds just an ONLPV1 Guest. Useful for creating update artifacts.
+../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1
 
-> The ONIE profiles are found in `meta-mion-stordis/conf/onie-profiles/,<MACHINE>/`.
+# Builds an ONLPV1 ONIE image
+../mc_build.sh -m stordis-bf2556x-1t -h host-onie:mion-onie-image-onlpv1
 
-## Basic Commands
-The following commands uses the `-T` argument which allows for multiple
-pairs of `System Profile:Application Profile`.
+# Builds an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
+../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-mender:mion-host -d mion-guest-onlpv1
 
-## Examples:
-
-`/scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv2 -T mion-native-mender:mion-host-prod-mender`
-`-M stordis-bf2556-1t` specifies the machine, the first set specified with `-T` 
-builds a guest container with support for ONLPv2. The second builds a mion OS
-running on the machine, and an application profile with mender support.
-
-### To Build host filesystem with ONLPv1 Guest:
-
-`./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv1 -T mion-native-onie-new:mion-host-prod`
-
-### To Build host filesystem with ONLPv2 Guest:
-
-`./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv2 -T mion-native-onie-new:mion-host-prod`
-
-### To Build ONIE installer for ONLPv1:
-
-`./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv1 -T mion-native-onie:mion-host-onie-onlpv1`
-
-### To Build ONIE installer for ONLPv2:
-
-`./scripts/build.py -M stordis-bf2556x-1t -T guest:mion-guest-onlpv2 -T mion-native-onie:mion-host-onie-onlpv2`
-
-### To drop into a development shell and use bitbake directly:
-`./scripts/build.py --shell`
-> You can also specify machine with `-M`, system profiles with `-S` and
-application profiles with `-A`. The '`-T` option can still be used, but can
-only be used for one machine, system profile, and application profile at a time.
+# Emits the commandline to build an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
+../mc_build.sh -e -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-mender:mion-host -d mion-guest-onlpv1
+```
