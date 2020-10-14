@@ -1,3 +1,7 @@
+layout: default
+title: ONL: Module Build Process
+nav_order: 5
+
 ONL: Module Build Process
 =========================
 ONL builds it's sources in a special way. In a typical build system, you might expect to find a set of sources associated with a single target, whether it be static/shared libraries or executables, and the linker is used to bring everything together. This is not the case with ONL.
