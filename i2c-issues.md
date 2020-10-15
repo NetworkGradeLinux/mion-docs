@@ -1,3 +1,9 @@
+---
+layout: page
+title: I2C Issues
+nav_order: 10
+---
+
 I2C Issues
 ==========
 
