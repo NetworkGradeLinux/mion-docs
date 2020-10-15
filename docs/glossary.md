@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Glossary
-nav_order: 99
+nav_order: 98
 # permalink: /glossary/
 ---
 
