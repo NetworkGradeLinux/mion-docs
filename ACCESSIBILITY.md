@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Accessibility
-permalink: /accesibility.html
+permalink: /accessibility.html
 nav_order: 6
 ---
 
