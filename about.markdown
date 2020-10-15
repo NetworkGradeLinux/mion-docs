@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About mion
-permalink: /about/
+permalink: /about.html
 nav_order: 99
 ---
 
