@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Image Types 
+title: Image Types
+permalink: /imagestypes.html
 nav_order: 5
 # permalink: /imagetypes/
 ---
