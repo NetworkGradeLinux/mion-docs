@@ -29,8 +29,10 @@ visibility target for attack, and could cause catastrophic harm through failure.
 A secure software foundation with a strong and supportive community is
 essential.
 
-<< HIGH LEVEL GOALS HERE >>
----------------------------
+
+
+<!-- << HIGH LEVEL GOALS HERE >> 
+---------------------------    -->
 
 
 
