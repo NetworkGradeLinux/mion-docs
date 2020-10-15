@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Image Types 
-nav_order: 99
+nav_order: 5
 # permalink: /imagetypes/
 ---
 
