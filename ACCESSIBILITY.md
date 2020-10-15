@@ -1,3 +1,10 @@
+---
+layout: page
+title: Accessibility
+nav_order: 6
+---
+
+
 Accessibility
 =============
 
