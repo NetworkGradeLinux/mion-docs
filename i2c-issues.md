@@ -7,7 +7,8 @@ nav_order: 10
 I2C Issues
 ==========
 
-[Explanation of i2c here .......]
+I2C (I *squared* C) is a serial communication bus, useful for it's simple and
+low cost design.
 
 ONLP platform implementations often rely on i2c capability to talk to various
 hardware components. This functionality has changed greatly amongst kernel 
