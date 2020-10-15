@@ -15,8 +15,8 @@ Mion is a bare-metal operating system for network devices, with
 security and supportability at it's core.
 {: .fs-6 .fw-300 }
 
-[View it on GitHub](https://github.com/APS-Networks/mion)
-{: .btn .fs-5 .mb-4 .mb-md-0 }
+# [View it on GitHub](https://github.com/APS-Networks/mion)
+# {: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
