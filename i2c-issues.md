@@ -7,7 +7,9 @@ nav_order: 10
 I2C Issues
 ==========
 
-ONLP platform implmentations often rely on i2c capability to talk to various
+[Explanation of i2c here .......]
+
+ONLP platform implementations often rely on i2c capability to talk to various
 hardware components. This functionality has changed greatly amongst kernel 
 versions, which ONL has been forced to handle. Because Mion provides a fixed
 kernel, this has platform maintainers will have to:
