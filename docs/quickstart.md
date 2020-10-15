@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Quickstart Guide
+permalink: /quickstart.html
 nav_order: 2
 has_children: false
 ---
