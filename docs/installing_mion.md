@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Image Types
-permalink: /imagestypes.html
+title: Installing Mion
+permalink: /installing_mion.html
 nav_order: 7
-# permalink: /imagetypes/
+# permalink: /installing_mion/
 ---
 
 Installing Mion
