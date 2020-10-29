@@ -51,7 +51,7 @@ Before running the build, check to make sure all layers you intend on using are 
 To begin, set up the build environment using the OpenEmbedded init script:
 
 ```shell
-source openembedded-core/oe-init-build-env`
+source openembedded-core/oe-init-build-env
 ```
 
 This will place you in the build directory.
