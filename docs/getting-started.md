@@ -66,12 +66,12 @@ sudo dnf install gawk make wget tar bzip2 gzip python3 unzip perl patch \
 
 ```shell
 $ sudo yum install -y epel-release
-     $ sudo yum makecache
-     $ sudo yum install gawk make wget tar bzip2 gzip python3 unzip perl patch \
+$ sudo yum makecache
+$ sudo yum install gawk make wget tar bzip2 gzip python3 unzip perl patch \
      diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath socat \
      perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue python36-pip xz \
      which SDL-devel xterm
-     $ sudo pip3 install GitPython jinja2
+$ sudo pip3 install GitPython jinja2
 ```
 
 ### OpenSUSE Leap (15.1)
@@ -80,7 +80,7 @@ $ sudo yum install -y epel-release
 sudo zypper install python gcc gcc-c++ git chrpath make wget python-xml \
      diffstat makeinfo python-curses patch socat python3 python3-curses tar python3-pip \
      python3-pexpect xz which python3-Jinja2 Mesa-libEGL1 libSDL-devel xterm rpcgen
-     $ sudo pip3 install GitPython
+$ sudo pip3 install GitPython
 ```
 
 *The above requirements and build host packages are originally from Yocto Project Quick Build Copyright 2010-2020 Linux Foundation, under the [Creative Commons Attribution-Share Alike 2.0 UK: England & Wales](https://creativecommons.org/licenses/by-sa/2.0/uk/). We added the cake.*
