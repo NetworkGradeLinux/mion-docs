@@ -5,7 +5,7 @@ For viewing the contents directly from github, a list of topics is provided here
 
 * [About](about.markdown)
 
-* [Quickstart](docs/quickstart.md)
+* [Getting Started](docs/getting-started.md)
 
 * [Resources](docs/resources.md)
 
