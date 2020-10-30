@@ -28,7 +28,7 @@ url: "https://docs.mion.io" # the base hostname & protocol for your site, e.g. h
 # baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mion_os
-github_username:  APS-Networks
+github_username:  NetworkGradeLinux
 
 
 # Build settings
