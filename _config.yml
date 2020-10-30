@@ -66,7 +66,7 @@ aria_logo: mion
 #   - vendor/ruby/
 
 
-# aux_links:
-#   "Mion on GitHub":
-#     - "//github.com/APS-Networks/mion"
+aux_links:
+  "Mion on GitHub":
+    - "//github.com/APS-Networks/mion"
 
