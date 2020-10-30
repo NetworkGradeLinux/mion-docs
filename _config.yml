@@ -39,7 +39,7 @@ plugins:
 
 nav_sort: case_insensitive
 # Dirty work-around until we can find the cause for logo not appearing
-logo: "assets/images/mion-header-logo.png"
+logo: "assets/images/APS_LOGO_BESIDE_COLOUR.svg"
 color_scheme: mion
 
 # Added extra in _includes/title.html
