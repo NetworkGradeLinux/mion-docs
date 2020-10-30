@@ -113,7 +113,6 @@ The `meta-mion` layer provides mion distro configuration.
 Before going any further, check that you've done the following:
 
 - [ ] [Check that you meet build host requirements](https://www.yoctoproject.org/docs/3.1.3/dev-manual/dev-manual.html#dev-preparing-the-build-host)
-
 - [ ] [Install build host requirements](https://www.yoctoproject.org/docs/3.1.3/ref-manual/ref-manual.html#required-packages-for-the-build-host)
 - [ ] Obtain mion sources
 
@@ -122,7 +121,7 @@ Before going any further, check that you've done the following:
 To begin, set up the build environment using the OpenEmbedded init script:
 
 ```shell
-source openembedded-core/oe-init-build-env`
+source openembedded-core/oe-init-build-env
 ```
 
 This will place you in the `build` directory.
