@@ -2,7 +2,7 @@
 layout: page
 title: About mion
 permalink: /about.html
-nav_order: 99
+nav_order: 100
 ---
 
 About
