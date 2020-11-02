@@ -64,7 +64,8 @@ aria_logo: mion
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
+exclude:
+  - _meta/
 
 aux_links:
   "Mion on GitHub":
