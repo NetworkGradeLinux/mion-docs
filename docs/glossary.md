@@ -20,6 +20,7 @@ General
 * __ACL__:	Access Control List
 * __ASIC__: Application-Specific Integrated Circuit
 * __BMC__:	Baseboard Management Controller
+* __BNG__:	[Broadband Network Gateway] (https://en.wikipedia.org/wiki/Broadband_remote_access_server)
 * __BSP__:	Board Support Package
 * __CERT__: Computer Emergency Response Team
 * __CNI__:	Critical National Infrastructure
