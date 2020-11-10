@@ -108,14 +108,6 @@ The main repository for mion contains sub-modules for OpenEmbedded and Yocto Pro
 
 The `meta-mion` layer provides mion distro configuration.
 
-## Checklist
-
-Before going any further, check that you've done the following:
-
-- [ ] [Check that you meet build host requirements](https://www.yoctoproject.org/docs/3.1.3/dev-manual/dev-manual.html#dev-preparing-the-build-host)
-- [ ] [Install build host requirements](https://www.yoctoproject.org/docs/3.1.3/ref-manual/ref-manual.html#required-packages-for-the-build-host)
-- [ ] Obtain mion sources
-
 ## Basic Usage
 
 To begin, set up the build environment using the OpenEmbedded init script:
