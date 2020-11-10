@@ -4,7 +4,7 @@
 
 **Git Workflow**
 
-For those new to git threre are a number of good guides provided by GitHub available [here](https://guides.github.com/)
+For those new to git there are a number of good guides provided by GitHub available [here](https://guides.github.com/)
 
 We follow the standard [GitHub Workflow](https://guides.github.com/introduction/flow/)
 - This applies to all of the main repos: mion, meta-mion, meta-mion-stordis, etc.
