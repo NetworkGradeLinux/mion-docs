@@ -10,11 +10,11 @@ Resources
 
 [mion](https://mion.github.io)
 ------------------------------
-* [mion](https://github.com/aps-networks/mion) Base mion github repositiory.
-* [meta-mion](https://github.com/APS-Networks/meta-mion) GitHub repository for 
+* [mion](https://github.com/aps-networks/mion) Base Mion github repositiory.
+* [meta-mion](https://github.com/APS-Networks/meta-mion) GitHub repository for
   the base layer
 * [meta-mion-stordis](https://github.com/APS-Networks/meta-mion-stordis)
-  reference platform layer for Stordis BF2556x-1t switch, with ONLPv1 support.
+  reference platform layer for STORDIS BF2556x-1t switch, with ONLPv1 support.
 
 
 [The Yocto Project](https://www.yoctoproject.org/):
@@ -37,7 +37,7 @@ hardware. Maintains `bitbake` and OpenEmbedded Core.
 [OpenEmbedded](https://www.openembedded.org/wiki/Main_Page)
 -----------------------------------------------------------
 Build framework for embedded Linux
-* [OpenEmbedded-Core](https://www.openembedded.org/wiki/OpenEmbedded-Core): 
+* [OpenEmbedded-Core](https://www.openembedded.org/wiki/OpenEmbedded-Core):
   * Core support for machine architectures (x86-64, arm, etc)
   * Only builds for QEMU machines, and not physical targets
 * [Layer](https://www.openembedded.org/Layers_FAQ): A collection of recipes and configuration that can be used on top of OpenEmbedded Core.

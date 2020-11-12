@@ -20,7 +20,7 @@ security and supportability at it's core.
 
 ---
 
-The key driver of this project is to provide an operating system designed for 
+The key driver of this project is to provide an operating system designed for
 operation in high-risk environments such as Critical National Infrastructure,
 and foster an inclusive and supportive community foundation.
 
@@ -31,7 +31,7 @@ essential.
 
 
 
-<!-- << HIGH LEVEL GOALS HERE >> 
+<!-- << HIGH LEVEL GOALS HERE >>
 ---------------------------    -->
 
 
