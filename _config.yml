@@ -68,6 +68,6 @@ exclude:
   - _meta/
 
 aux_links:
-  "Mion on GitHub":
+  "mion on GitHub":
     - "//github.com/NetworkGradeLinux/mion"
 
