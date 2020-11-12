@@ -17,7 +17,7 @@ We follow the standard [GitHub Workflow](https://guides.github.com/introduction/
 
 GitHub Teams are used to manage permissions to repos:
 
-- Mion Dev - grants write permission to the main Mion development repos
+- mion Dev - grants write permission to the main mion development repos
 
 **Git Commit Messages** 
 

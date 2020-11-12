@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "APS Networks Announces Mion OS"
+title:  "APS Networks Announces mion OS"
 date:   2020-07-31 15:52:17 +0100
 categories: jekyll update
 ---
 
-## APS Networks Announces Mion OS
+## APS Networks Announces mion OS
 
 ---
 
