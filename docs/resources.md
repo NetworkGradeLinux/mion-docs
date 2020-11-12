@@ -8,9 +8,9 @@ nav_order: 4
 Resources
 =========
 
-[Mion](https://mion.github.io)
+[mion](https://mion.github.io)
 ------------------------------
-* [mion](https://github.com/aps-networks/mion) Base Mion github repositiory.
+* [mion](https://github.com/aps-networks/mion) Base mion github repositiory.
 * [meta-mion](https://github.com/APS-Networks/meta-mion) GitHub repository for 
   the base layer
 * [meta-mion-stordis](https://github.com/APS-Networks/meta-mion-stordis)
