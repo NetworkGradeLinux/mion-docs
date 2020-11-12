@@ -11,7 +11,7 @@ Installing Mion
 
 Introduction
 -------
-The Mion 0.9 release currently supports a single platform - the **APS Networks (Formally Stordis) BF2556X-1T**
+The Mion 0.9 release currently supports a single platform - the **APS Networks (Formally STORDIS) BF2556X-1T**
 
 Image types
 -------
