@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Installing Mion
+title: Installing mion
 permalink: /installing_mion.html
 nav_order: 7
 # permalink: /installing_mion/
 ---
 
-Installing Mion
+Installing mion
 ========
 
 Introduction
 -------
-The Mion 0.9 release currently supports a single platform - the **APS Networks (Formally Stordis) BF2556X-1T** 
+The mion 0.9 release currently supports a single platform - the **APS Networks (Formally Stordis) BF2556X-1T** 
 
 Image types
 -------

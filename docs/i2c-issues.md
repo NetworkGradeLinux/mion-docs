@@ -12,7 +12,7 @@ low cost design.
 
 ONLP platform implementations often rely on i2c capability to talk to various
 hardware components. This functionality has changed greatly amongst kernel 
-versions, which ONL has been forced to handle. Because Mion provides a fixed
+versions, which ONL has been forced to handle. Because mion provides a fixed
 kernel, this has platform maintainers will have to:
 
 * Make sure any implementations that use i2c headers directly are using the correct
@@ -66,11 +66,11 @@ At least one vendor has declared a source file containing their own definition o
 `union i2c_smbus_data`, rather than go through the hassle of dealing with it
 externally.
 
-Finally, as it compares to Mion, we are not building the same kernels is
+Finally, as it compares to mion, we are not building the same kernels is
 ONL, and we are not using the same packaging, and therefore, ONL's solution may
 not work (this is platform dependent).
 
-The recipes for Mion, with the kernel version being used, means that:
+The recipes for mion, with the kernel version being used, means that:
 * `i2c-tools` version 4 is used;
 * The linux header do not include all the `smbus` defintions (i.e., 
   `i2c_smbus_data`) which are defined in:
