@@ -10,11 +10,13 @@ Resources
 
 [mion](https://mion.github.io)
 ------------------------------
+
 * [mion](https://github.com/aps-networks/mion) Base Mion github repository.
 * [meta-mion](https://github.com/NetworkGradeLinux/meta-mion) GitHub repository for
   the base layer
 * [meta-mion-stordis](https://github.com/NetworkGradeLinux/meta-mion-bsp/tree/dunfell/meta-mion-stordis)
-  reference platform layer for STORDIS BF2556x-1t switch, with ONLPv1 support.
+  reference platform layer for APS Networks (formerly STORDIS) BF2556x-1t
+  switch, with ONLPv1 support.
 
 
 [The Yocto Project](https://www.yoctoproject.org/):
