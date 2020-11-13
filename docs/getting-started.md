@@ -8,7 +8,7 @@ has_children: false
 
 {: .no_toc }
 
-This documentation is for mion 0.9.x, **Achill**, which uses Yocto Project **dunfell**
+This documentation is for mion 0.9.x, **Achill**, which uses Yocto Project **Dunfell**
 
 ## Table of contents
 
