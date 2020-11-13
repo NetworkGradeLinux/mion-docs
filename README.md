@@ -3,7 +3,7 @@
 ## Welcome to the mion-docs repository
 
 **Looking for NGL/mion documentation?**
-[https://mion.docs.io](https://docs.mion.io).
+[https://docs.mion.io](https://docs.mion.io).
 
 For viewing directly from GitHub, see the quick links below.
 

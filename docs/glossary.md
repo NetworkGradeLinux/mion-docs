@@ -9,7 +9,7 @@ nav_order: 98
 Glossary
 ========
 
-Mion
+mion
 ---------
 * __BitBake Recipe__: Basic metadata file that describes the building of a package. Includes descriptions, locations
 * __`srunc`__: Simple `runc`; lightweight command line utility for managing containers in mion.

@@ -8,7 +8,7 @@ has_children: false
 
 {: .no_toc }
 
-This documentation is for mion 0.9.x, **Achill**, which uses Yocto Project **dunfell**
+This documentation is for mion 0.9.x, **Achill**, which uses Yocto Project **Dunfell**
 
 ## Table of contents
 
@@ -92,12 +92,10 @@ If you are ready to start building mion:
 ```shell
 git clone --recursive git@github.com:NetworkGradeLinux/mion.git
 cd mion
-
 # To obtain related mion layers:
 git clone git@github.com:NetworkGradeLinux/meta-mion.git
-
-# Obtain the relevant hardware layer, i.e. git clone git@github.com:NetworkGradeLinux/meta-mion-<ONL_VENDOR>.git
-git clone git@github.com:NetworkGradeLinux/meta-mion-stordis.git
+# Obtain the mion hardware layer
+git clone git@github.com:NetworkGradeLinux/meta-mion-bsp.git
 
 ```
 

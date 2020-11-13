@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Installing Mion
+title: Installing mion
 permalink: /installing_mion.html
 nav_order: 7
 # permalink: /installing_mion/
 ---
 
-Installing Mion
+Installing mion
 ========
 
 Introduction
