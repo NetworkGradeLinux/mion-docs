@@ -24,6 +24,7 @@ original meaning:
     * Leverage
     * Vertical
     * Paradigm shift
+    * Pivot
 
 These words tend to lose their meaning over time, and can be viewed negatively
 by some. You may use them, but do so with consideration.
