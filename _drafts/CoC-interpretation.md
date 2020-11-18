@@ -1,11 +1,11 @@
 # Interpretation of the Code of Conduct
 
 Taking inspiration from the [Linux Kernel Contributor Code of Conduct Interpretation](https://www.kernel.org/doc/html/latest/process/code-of-conduct-interpretation.html#code-of-conduct-interpretation),
-We are providing our interpretation of the aforementioned Code of Conduct which
+we are providing our interpretation of the aforementioned Code of Conduct which
 has been adopted for use for mion; this allows for
 adaptation specific to our project.
 
-As the mion project grows and changes over time, so may our interpretation.
+As Network Grade Linux grows and changes over time, so may our interpretation.
 Expect this document to be subject to change. Changes to our
 interpretation, if and when they do occur, will be announced through the
 appropriate community communication channels, and a changelog will be attached
