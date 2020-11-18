@@ -18,7 +18,7 @@ include:
 * Being respectful of differing viewpoints and experiences
 * Gracefully accepting and giving constructive criticism
 * Focusing on what is best for the community
-* Showing empathy towards other community members
+* Showing compassion and kindness towards other community members
 
 Examples of unacceptable behavior by participants include:
 
