@@ -1,3 +1,11 @@
+---
+layout: default
+title: Interpretation of the Code of Conduct
+parent: Code of Conduct
+nav_order: 100
+permalink: /Coc-interpretation.html
+---
+
 # Interpretation of the Code of Conduct
 
 Taking inspiration from the [Linux Kernel Contributor Code of Conduct Interpretation](https://www.kernel.org/doc/html/latest/process/code-of-conduct-interpretation.html#code-of-conduct-interpretation),
