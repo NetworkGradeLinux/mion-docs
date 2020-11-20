@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Code of Conduct
+permalink: /code-of-conduct.html
+nav_order: 100
+has_children: true
 ---
 # Code of Conduct
 
