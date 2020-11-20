@@ -1,3 +1,8 @@
+---
+layout: default
+title: Interpretation of the Code of Conduct
+---
+
 # Interpretation of the Code of Conduct
 
 Taking inspiration from the [Linux Kernel Contributor Code of Conduct Interpretation](https://www.kernel.org/doc/html/latest/process/code-of-conduct-interpretation.html#code-of-conduct-interpretation),
