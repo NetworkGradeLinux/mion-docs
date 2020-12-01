@@ -24,6 +24,7 @@ General
 * __CERT__: Computer Emergency Response Team
 * __CNI__:	Critical National Infrastructure
 * __CRUD__: Create, read, update and delete
+* __DPU__: Data Processing Unit
 * __FPGA__: Field Programmable Gate Array
 * __i2c__:	Inter-IC, a simple device communications bus
 * __INT__:	In-band Network Telemetry
