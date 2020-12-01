@@ -52,6 +52,7 @@ isolate applications running inside from the operating system and other applicat
 * __PPTP__:	Point-to-Point Tunneling Protocol
 * __PTP__:	Precision Time Protocol
 * __RAN__:	Radio Access Network
+* __RDMA__:  Remote Direct Memory Access
 * __RISC__: reduced instruction set computing - https://riscv.org/
 * __SAI__:	Switch Abstraction Interface - https://github.com/opencomputeproject/SAI
 * __SAL__:	Switch Abstraction Layer
