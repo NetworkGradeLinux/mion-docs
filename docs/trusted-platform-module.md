@@ -8,8 +8,8 @@ nav_order: 8
 
 **Trusted Platform Module (TPM) support in mion**:
 
-TPM support is provided by the inclusion of the `meta-security/meta-tpm` layer.
-For any system with a TPM2 chip onboard the inclusion of "tpm2" in
+TPM support is provided by the inclusion of the [`meta-security/meta-tpm`](https://git.yoctoproject.org/cgit/cgit.cgi/meta-security) layer.
+For any system with a TPM2 chip onboard adding "tpm2" to the 
 `MACHINE_FEATURES` will result in the inclusion of the required kernel drives
 and a number of user-space TPM2 tools. This is defined in machine specific
 configuration in `meta-mion-bsp/<vendor>/conf/machine/<machine_name>.conf`
