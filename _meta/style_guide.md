@@ -4,7 +4,7 @@ This style guide is to provide some general guidelines for written
 communications. It is being kept simple to allow individual voices to be
 heard and in doing so form the collective voice of mion.
 
-When working in markdown, check syntax and style issues by using
+When working in Markdown, check syntax and style issues by using
 [markdownlint](https://github.com/markdownlint/markdownlint).
 
 ## Spelling, Grammar, and Word Choice
@@ -76,7 +76,7 @@ Some language to watch out for and alternatives:
 
 > Keep in mind that it's permissible to use the outdated technical terms if
   they exist within code being referenced, or a primary source of information
-  that has not yet been updated.Please make a note stating such if this is the
+  that has not yet been updated. Plaease make a note stating such if this is the
   case, however.
 
 ### Accessibility
@@ -99,23 +99,24 @@ be a good choice.
 **Format**: For technical documentation, use
 [github](https://github.github.com/gfm/) flavored markdown.
 
-**Capitalization**: 'mion' should always be lowercase.
+**Capitalization**: 'mion' should always be lowercase. 'ONIE' should always be
+uppercase. 
 
 **Markdown Column Length**: The most important point is that markdown is
 rendered properly. If using a specific column length, make sure to check that
 there is no white-space between lines. Be aware that two white-spaces create a
-line break in markdown. When using [markdownlint](https://github.com/markdownlint/markdownlint)
+line break in Markdown. When using [markdownlint](https://github.com/markdownlint/markdownlint)
 to check for syntax and style issues, it flags lines that go past column 80,
-with the exception being lines that can't be broken up,such as links. As such,
+with the exception being lines that can't be broken up, such as links. As such,
 column 80 is acceptable given that you check that there isn't any unintended
 newlines.
 
-**Companies and Projects:** When referring to a company,project, or product,
+**Companies and Projects:** When referring to a company, project, or product,
 check that capitalization and name are correct. If there has been a change in
 a name, update and reflect that. For example, when talking about what had been
 "the STORDIS BF2556X-1T", it should now be referred to as "the APS Networks
 (formerly STORDIS) BF2556X-1T". When porting a new switch over, it is a good
-idea to check that the information around it is up to date when writing
+idea to check that the surrounding information is up to date when writing
 documentation.
 
 **Links:** When providing links, use the word that you want to bring attention
