@@ -4,6 +4,9 @@ This style guide is to provide some general guidelines for written
 communications. It is being kept simple to allow individual voices to be
 heard and in doing so form the collective voice of mion.
 
+> Note for engineers: For bitbake recipes, see the [OpenEmbedded
+styleguide](https://www.openembedded.org/wiki/Styleguide)
+
 When working in Markdown, check syntax and style issues by using
 [markdownlint](https://github.com/markdownlint/markdownlint).
 
@@ -100,7 +103,7 @@ be a good choice.
 [github](https://github.github.com/gfm/) flavored markdown.
 
 **Capitalization**: 'mion' should always be lowercase. 'ONIE' should always be
-uppercase. 
+uppercase.
 
 **Markdown Column Length**: The most important point is that markdown is
 rendered properly. If using a specific column length, make sure to check that
