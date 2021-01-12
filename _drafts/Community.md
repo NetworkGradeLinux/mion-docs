@@ -31,18 +31,21 @@ can attend one of our public meetings.
 
 ### Slack
 
+All are welcome to stop by, introduce themselves, and say hi to us over on Slack!
+
 Here's our current slack channels, and what each are used for:
 
-* `# general`; news, announcements and project wide discussions
-* `# gh-notify`; reserved for automated github updates on CI builds, issue
+* **general:** news, announcements and project wide discussions, good place to introduce
+  yourself to everyone!
+* **gh-notify:** reserved for automated github updates on CI builds, issue
   statuses, and pull requests
-* `# network-grade-linux`; mostly technical discussions, this is where you
+* **network-grade-linux:** mostly technical discussions, this is where you
   should ask questions regarding mion
-* `# random`; this is a great place to say hi and simply hangout and chat
+* **random:** this is a great place to say hi and simply hangout and chat
 
 While not required, we suggest filling out your slack profile with what you do,
 and adding where you work in parentheses in your display name. Keep in mind
-that many of us are in different time zones, so replies may take some time.
+  that many of us are in different time zones, so replies may take some time.
 
 ### Public Meetings
 
