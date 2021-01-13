@@ -23,9 +23,9 @@ mion provides a network operating system(NOS) focusing on enterprise level
 managed switches with support for the [Open Network Install Environment(ONIE)](http://onie.org/)
 support and the Open Network Linux Platform (ONLP) API.
 
-A key driver of mion is to provide an operating system designed for
-operation in high-risk environments (such as Critical National Infrastructure),
-and to foster an inclusive and supportive community foundation.
+The core function of mion is to provide a secure, reliable and performant operating system suitable for use in highly secured environments. It is designed to function within environments that maintain elements such as Critical National Infrastructure, and can scale from datacenter, to telco and beyond securely.
+
+The mion team values inclusiveness and diversity. This is not just a slogan for us, it is the philosophy that underpins the team. We work hard to ensure that we respect, value and encourage participation from every walk of life. For us, community is core.
 
 As network devices are a high visibility target for attacks which could cause
 catastrophic harm through failure, a secure software foundation with a strong
