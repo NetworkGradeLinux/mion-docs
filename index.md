@@ -19,23 +19,27 @@ security and supportability at it's core.
 {: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
+mion provides a network operating system(NOS) focusing on enterprise level
+managed switches with support for the [Open Network Install Environment(ONIE)](http://onie.org/)
+support and the Open Network Linux Platform (ONLP) API.
 
-The key driver of this project is to provide an operating system designed for
-operation in high-risk environments such as Critical National Infrastructure,
-and foster an inclusive and supportive community foundation.
+The core function of mion is to provide a secure, reliable and performant
+operating system suitable for use in highly secured environments. It is designed
+to function within environments that maintain elements such as Critical National
+Infrastructure, and can scale from datacenter, to telco and beyond securely.
 
-Network devices are a high
-visibility target for attack, and could cause catastrophic harm through failure.
-A secure software foundation with a strong and supportive community is
-essential.
+The mion team values inclusiveness and diversity. This is not just a slogan for
+us, it is the philosophy that underpins the team. We work hard to ensure that we
+respect, value and encourage participation from every walk of life. For us,
+community is core.
 
+As network devices are a high visibility target for attacks which could cause
+catastrophic harm through failure, a secure software foundation with a strong
+and supportive community is vital. With mion being built from the Yocto Project,
+security is baked in.
 
+Interested? Read more [about mion](docs/about.md) and what makes us special.
 
-<!-- << HIGH LEVEL GOALS HERE >>
----------------------------    -->
-
-
-
-
-
-
+If you'd like to jump right in, check out our [getting started guide](docs/getting-started.md),
+or see our [community](docs/community/Community.md) page on how you can get
+involved or to simply say hello!
