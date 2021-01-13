@@ -140,7 +140,10 @@ run if you ran this from bitbake. If you want to disable the auto-starting of
 the container, use -d with a comma delineated list of the container image name.
 
 If you are familiar with Yocto Project development and multiconfig and wish to
-use bitbake directly, see the `local.conf` for variables that need to be set.
+use bitbake directly for builds, see the `local.conf` for variables that need to
+be set. You can also get the variables by running the `mc_build.sh` script with
+`-e` and the optional `-v`  prepending the `BB_ENV_EXTRAWHITE` output to the
+bitbake command you which to use in order to pass them in on the command line.
 
 > Note: The script can not always determine the vendor name, if you encounter
 that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
