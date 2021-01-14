@@ -17,7 +17,7 @@ First, please read and agree to our [Code of Conduct](docs/community/code-of-con
 ## How to Participate
 
 There are a number of ways to participate, from contributing code and
-documentation to communicating with others in the community. 
+documentation to communicating with others in the community.
 
 Each repository may have different requirements for contributing, in which case
 it can be found in the `CONTRIBUTING.md` in the repository's root. For an
@@ -55,4 +55,4 @@ Public meetings are subject to changes, it is always best to check on our Slack
 * [NGL Weekly Bug Scrub](https://zoom.us/j/98346073206): Every Wednesday,
   1600-1700 UTC (04:00-05:00 PM)
 * [Documentation meeting](https://zoom.us/j/92718009193?pwd=N3V6Q0lpYzlNZXRNR25EZGEzKy9yUT09):
-  Every other Thursday starting on 2021-01-14 at 1200-1300 UTC (12:00-01:00pm
+  Every other Thursday starting on 2021-01-14 at 1200-1300 UTC (12:00-01:00pm)
