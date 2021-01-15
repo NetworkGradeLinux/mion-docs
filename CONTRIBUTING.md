@@ -24,10 +24,10 @@ the project, you agree that you've read and will follow the Code of Conduct.
 * The documentation is written using Markdown; see <https://www.markdownguide.org/>
 for reference.
 
-* Read and become familiar with our [git workflow](_meta/git_commandments.md),
+* Read and become familiar with our [git workflow](https://github.com/NetworkGradeLinux/mion-docs/wiki/git_commandments),
 though an overview is provided below.
 
-* All documentation is expected to follow the [mion style guide](_meta/style_guide.md).
+* All documentation is expected to follow the [mion style guide](https://github.com/NetworkGradeLinux/mion-docs/wiki/style_guide).
 
 Lastly, find or report an issue [here](https://github.com/NetworkGradeLinux/mion-docs/issues).
 For existing issues, add a comment that you'd like the issue assigned to you.
@@ -128,7 +128,7 @@ navigate to <http://localhost:4000> to see the changes.
 
 ### Changes to Meta Documentation
 
-If you're working on this README or anything in either `_meta` or in the
+If you're working on this README or anything in either the wiki or in the
 _drafts folder, `_drafts`, you can easily view how the markdown will look
 using [grip](https://github.com/joeyespo/grip). See link for installation and
 use.
@@ -153,8 +153,8 @@ git commit --signoff
 `git config --global core.editor name_of_editor`
 
 If you need help with the commit message, refer back to
-[git workflow](_meta/git_commandments.md) or ask another member of the docs
-team.
+[git workflow](https://github.com/NetworkGradeLinux/mion-docs/wiki/git_commandments)
+or ask another member of the docs team.
 
 **If you made multiple commits on your branch** before finishing up and putting
 in a pull request, be sure to rebase and squash/fixup so that you're submitting

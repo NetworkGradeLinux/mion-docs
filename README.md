@@ -22,8 +22,6 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 * [Getting Started](docs/getting-started.md)
 
-* [Git workflow](_meta/git_commandments.md)
-
 * [Glossary](docs/glossary.md)
 
 * [I^2C Issues](docs/i2c-issues.md)
@@ -34,17 +32,15 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 * [Resources](docs/resources.md)
 
-* [Style Guide](_meta/style_guide.md)
-
 ## Structure/Directory layout
 
 General documentation can be found under `docs/`, except for `index.md`, which
 is in the top directory. Also in the top directory is this README and the
 license file.
 
-Within `_meta/` you can find the documentation style guide, mion-docs meeting
-minutes, our git workflow, and other materials related to both mion-docs and
-general project guidelines that may be helpful info for contributors.
+You can find the documentation style guide, mion-docs meeting minutes, our git
+workflow, and other materials related to mion development in our
+[wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki).
 
 ## License
 
