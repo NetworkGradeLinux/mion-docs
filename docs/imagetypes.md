@@ -1,10 +1,3 @@
----
-layout: default
-title: Image Types
-permalink: /imagestypes.html
-nav_order: 5
-# permalink: /imagetypes/
----
 
 Image Types and Multiconfig
 ========

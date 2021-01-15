@@ -1,15 +1,7 @@
----
-layout: page
-title: About mion
-permalink: /about.html
-nav_order: 100
----
+# About
 
-About
-=====
+## Why Yocto?
 
-Why Yocto?
-----------
 Embedded operating systems built through the Yocto Project are extremely 
 reliable and highly supportable. With over 20,000 engineers worldwide working on
 Yocto Project based operating systems, it is almost guaranteed that you will be
@@ -21,8 +13,8 @@ increasingly hostile environments.
 
 
 
-Why mion?
----------
+## Why mion?
+
 mion builds on Yocto by providing multiple ways of providing a NOS. One of these
 is a a lightweight container runtime that brings the benefits of 
 containerisation to the world of bare metal. The entire software stack can be
@@ -46,8 +38,7 @@ system will not break.
 
 
 
-What Does This All Mean?
-------------------------
+## What Does This All Mean?
 Embedded no longer means restrictive. Using mion, the operating system can be
 layered with additional applications and features. This includes applications,
 frameworks and [SDK][sdk]s and as such, it can be made into a fully featured
@@ -63,8 +54,7 @@ And, more generally, embedded operating systems:
 
 
 
-What it is Not
---------------
+## What it is Not
 mion is not a [Network Operating System (NOS)][nos-wiki]. A NOS typically 
 comprises a base operating system (such as [Debian][debian]), which may or may
 not be modified, with networking applications on top. These applications process

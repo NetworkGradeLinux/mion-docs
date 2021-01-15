@@ -1,10 +1,3 @@
----
-layout: default
-title: Acknowledgements
-nav_order: 105
-# permalink: /acknowledgements/
----
-
 Special thanks goes out to [Togán Labs](https://www.toganlabs.com),
 [APS Networks](https://aps-networks.com) and
 [Age of Peers](https://ageofpeers.com) for initiating this project with heart,
