@@ -1,13 +1,4 @@
----
-layout: page
-title: Accessibility
-permalink: /accessibility.html
-nav_order: 99
----
-
-
-Accessibility
-=============
+# Accessibility
 
 This documentation endeavours to be as accessible as possible with respect to 
 the following the [World Wide Web Consortium's](https://www.w3.org/) (w3c) [Web

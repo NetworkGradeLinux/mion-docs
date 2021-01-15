@@ -1,21 +1,6 @@
----
-layout: default
-title: Getting Started Guide
-permalink: /getting-started.html
-nav_order: 2
-has_children: false
----
-
-{: .no_toc }
-
 This documentation is for **mion blasket-2020.12**, which uses Yocto Project **Dunfell**
 
 ## Table of contents
-
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ## Pre-Requirements
 

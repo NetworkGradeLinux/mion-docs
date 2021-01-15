@@ -1,0 +1,22 @@
+site_name: mion docs
+repo_url: https://github.com/NetworkGradeLinux/mion/
+nav:
+  - Home: index.md
+  - Getting Started Guide: getting-started.md
+  - Installing mion: installing_mion.md
+  - Resources: resources.md
+  - Image Types: imagetypes.md
+  - Trusted Platform Module: trusted-platform-module.md
+  - I2C Issues: i2c-issues.md
+  - Glossary: glossary.md
+  - Accessibility: ACCESSIBILITY.md
+  - About: about.md
+  - Acknowedgements: acknowledgements.md
+
+# Theme settings
+theme:
+  name: material
+  scheme: mion
+
+extra_css:
+  - stylesheets/color_schemes/mion.css

@@ -1,10 +1,3 @@
----
-layout: default
-title: Glossary
-permalink: /glossary.html
-nav_order: 98
-# permalink: /glossary/
----
 
 Glossary
 ========
