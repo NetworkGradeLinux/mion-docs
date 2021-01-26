@@ -84,12 +84,12 @@ We added the cake.*
 If you are ready to start building mion:
 
 ```shell
-git clone --recursive git@github.com:NetworkGradeLinux/mion.git
+git clone --recursive https://github.com/NetworkGradeLinux/mion.git
 cd mion
 # To obtain related mion layers:
-git clone git@github.com:NetworkGradeLinux/meta-mion.git
+git clone https://github.com/NetworkGradeLinux/meta-mion.git
 # Obtain the mion hardware layer
-git clone git@github.com:NetworkGradeLinux/meta-mion-bsp.git
+git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
 
 ```
 
