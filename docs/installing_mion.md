@@ -1,11 +1,3 @@
----
-layout: default
-title: Installing mion
-permalink: /installing_mion.html
-nav_order: 7
-# permalink: /installing_mion/
----
-
 Installing mion
 ========
 

@@ -1,11 +1,3 @@
----
-layout: default
-title: Interpretation of the Code of Conduct
-parent: Code of Conduct
-grand_parent: Community
-nav_order: 103
-permalink: /Coc-interpretation.html
----
 
 # Interpretation of the Code of Conduct
 

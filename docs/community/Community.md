@@ -1,10 +1,3 @@
----
-layout: default
-title: Community
-permalink: /Community.html
-nav_order: 99
-has_children: true
----
 # The Network Grade Linux Community
 
 Welcome to Network Grade Linux/mion! Community is where open source lives and
@@ -12,7 +5,7 @@ thrives. Whether you have questions about using mion or code to contribute,
 below you'll find useful information on how to participate and become a member
 of our community!
 
-First, please read and agree to our [Code of Conduct](docs/community/code-of-conduct.md).
+First, please read and agree to our [Code of Conduct](code-of-conduct.md).
 
 ## How to Participate
 
@@ -26,7 +19,7 @@ overview of how to contribute, including patch guidelines and git workflow, see
 
 ## Getting in Touch
 
-The best way to get in touch is our [Slack](networkgradelinux.slack.com), or you
+The best way to get in touch is our [Slack](https://networkgradelinux.slack.com), or you
 can attend one of our public meetings.
 
 ### Slack

@@ -1,9 +1,3 @@
----
-layout: default
-title: Resources
-permalink: /resources.html
-nav_order: 4
----
 
 Resources
 =========
