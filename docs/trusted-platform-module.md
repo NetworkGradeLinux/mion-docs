@@ -1,9 +1,3 @@
----
-layout: default
-title: Trusted Platform Module
-permalink: /trusted_platform_module.html
-nav_order: 8
----
 # Trusted Platform Module
 
 **Trusted Platform Module (TPM) support in mion**:

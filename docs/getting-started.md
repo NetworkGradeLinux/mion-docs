@@ -1,7 +1,5 @@
 This documentation is for **mion blasket-2020.12**, which uses Yocto Project **Dunfell**
 
-## Table of contents
-
 ## Pre-Requirements
 
 If you are new to Yocto Project development, check out [Overview and
@@ -162,18 +160,18 @@ After you run the mc_build.sh script, bitbake gets called, first parsing all
 the recipes and making sure your `local.conf` and `bblayers.conf` looks good,
 before going to work "baking" your image!
 
-![image of build start](/assets/images/build_config.png)
+![image of build start](assets/images/build_config.png)
 
 > Much like a multilayer cake, how fast it gets finished is going to depend on
 the quantity and complexities of the layers, and how reliable your baking setup
 is!
 
-![image of in progress build](/assets/images/build_config_init_running.png)
+![image of in progress build](assets/images/build_config_init_running.png)
 
 While you enjoy a relaxing break, keep an eye on the screen for something like
 this:
 
-![completed image](/assets/images/build_done.png)
+![completed image](assets/images/build_done.png)
 
 Assuming you are still in the build directory, you'll find the finished images
 and related items such as the onie-installer in
@@ -192,6 +190,6 @@ down as follows:
 - *Deploying mion via ONIE*: **5 minutes per switch**
 
 You're finally done with this guide? Now it's time for
-[Installing mion](./installing_mion.md)!
+[Installing mion](installing_mion.md)!
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

@@ -5,7 +5,7 @@
   font-weight: 400;
   src: url("/assets/fonts/exo-2-v9-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("/assets/fonts/exo-2-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/exo-2-v9-latin-regular.woff2") format("woff2"), url("/assets/fonts/exo-2-v9-latin-regular.woff") format("woff"), url("/assets/fonts/exo-2-v9-latin-regular.ttf") format("truetype"), url("/assets/fonts/exo-2-v9-latin-regular.svg#Exo2") format("svg");
+  src: local(""), url("assets/fonts/exo-2-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/exo-2-v9-latin-regular.woff2") format("woff2"), url("assets/fonts/exo-2-v9-latin-regular.woff") format("woff"), url("assets/fonts/exo-2-v9-latin-regular.ttf") format("truetype"), url("assets/fonts/exo-2-v9-latin-regular.svg#Exo2") format("svg");
   /* Legacy iOS */ }
 h1, h2, h3 {
   font-family: 'Exo 2'; }
