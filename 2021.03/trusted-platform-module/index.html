@@ -295,21 +295,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../i2c-issues/" class="md-nav__link">
-        I2C Issues
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../glossary/" class="md-nav__link">
         Glossary
       </a>
@@ -339,33 +324,18 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        About
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
       
-      <label class="md-nav__link" for="nav-11">
+      <label class="md-nav__link" for="nav-9">
         Community
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Community" data-md-level="1">
-        <label class="md-nav__title" for="nav-11">
+        <label class="md-nav__title" for="nav-9">
           <span class="md-nav__icon md-icon"></span>
           Community
         </label>
@@ -464,17 +434,12 @@
                 
                 <h1 id="trusted-platform-module">Trusted Platform Module</h1>
 <p><strong>Trusted Platform Module (TPM) support in mion</strong>:</p>
-<p>TPM support is provided by the inclusion of the <a href="https://git.yoctoproject.org/cgit/cgit.cgi/meta-security"><code>meta-security/meta-tpm</code></a> layer.
-For any system with a TPM2 chip onboard adding "tpm2" to the 
-<code>MACHINE_FEATURES</code> will result in the inclusion of the required kernel drives
-and a number of user-space TPM2 tools. This is defined in machine specific
-configuration in <code>meta-mion-bsp/&lt;vendor&gt;/conf/machine/&lt;machine_name&gt;.conf</code>
-The kernel module should be automatically loaded on boot and will create a
-device node (usually <code>/dev/tpm0</code>) which gives access to the hardware.</p>
-<p><code>meta-security/meta-tpm</code> also provides a package group,
-<code>packagegroup-security-tpm2.bb</code>, which is included automatically and installs a
-number of common user space TPM2 tools. Additional tools are available in
-<code>meta-security/meta-tpm</code> if needed.</p>
+<p>TPM support is provided by the <a href="https://git.yoctoproject.org/cgit/cgit.cgi/meta-security"><code>meta-security/meta-tpm</code></a>
+layer. For any system with a TPM2 chip, add <code>tpm2</code>to <code>MACHINE_FEATURES</code> in
+<code>meta-mion-bsp/&lt;vendor&gt;/conf/machine/&lt;machine_name&gt;.conf</code> to
+include both the required kernel drivers, and a number of user-space TPM2 tools.</p>
+<p>The kernel module is automatically loaded on boot and will create a device node
+(usually <code>/dev/tpm0</code>) which provides access to the hardware.</p>
                 
               
               
@@ -508,13 +473,13 @@ number of common user space TPM2 tools. Additional tools are available in
           </a>
         
         
-          <a href="../i2c-issues/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../glossary/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                I2C Issues
+                Glossary
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

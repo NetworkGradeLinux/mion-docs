@@ -287,15 +287,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
-    Images
+  <a href="#image-configurations" class="md-nav__link">
+    Image Configurations
   </a>
   
 </li>
@@ -338,21 +331,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../i2c-issues/" class="md-nav__link">
-        I2C Issues
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../glossary/" class="md-nav__link">
         Glossary
       </a>
@@ -382,33 +360,18 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        About
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
       
-      <label class="md-nav__link" for="nav-11">
+      <label class="md-nav__link" for="nav-9">
         Community
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Community" data-md-level="1">
-        <label class="md-nav__title" for="nav-11">
+        <label class="md-nav__title" for="nav-9">
           <span class="md-nav__icon md-icon"></span>
           Community
         </label>
@@ -497,15 +460,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
-    Images
+  <a href="#image-configurations" class="md-nav__link">
+    Image Configurations
   </a>
   
 </li>
@@ -535,35 +491,38 @@
                 
                 
                 <h1 id="image-types-and-multiconfig">Image Types and Multiconfig</h1>
-<h2 id="introduction">Introduction</h2>
 <p>There are three main types of images in mion:</p>
 <ul>
-<li><strong>guest images</strong>:    Provide container images for the host OS</li>
-<li><strong>host images</strong>:     Small host image for running guests</li>
-<li><strong>normal images</strong>:   Provides a host image useful for bare image installs or ONIE installers</li>
+<li><strong>guest images</strong>: Provide container images for the host OS</li>
+<li><strong>host images</strong>:  Small host image for running guests</li>
+<li><strong>core images</strong>: Provides a host image useful for bare image installs or ONIE
+  installers</li>
 </ul>
-<p>As well as these image types there are also guest packaging recipes
-which package the guest images up and install them on the host image
-during build time. These are stored in recipes-core/mion-image-packaging
-and should be named in the format <image_name>-pkg</p>
-<h2 id="images">Images</h2>
+<h2 id="image-configurations">Image Configurations</h2>
+<blockquote>
+<p>where onlpv* can be "onlpv1" <em>or</em> "onlpv2"</p>
+</blockquote>
 <ul>
-<li><strong>mion-guest-onlpv1</strong>: A small guest with ONLPv1 installed</li>
-<li><strong>mion-guest-onlpv2</strong>: A small guest with ONLPv2 installed</li>
-<li><strong>mion-host</strong>: Small host image for running guests.</li>
-<li><strong>mion-image-onlpv1</strong>: A small image with ONLPv1 installed</li>
-<li><strong>mion-image-onlpv2</strong>: A small image with ONLPv2 installed</li>
+<li><strong>mion-guest-onlpv*</strong>: guest with ONLP installed</li>
+<li><strong>mion-host</strong>: Host image for running guests</li>
+<li><strong>mion-image-onlpv*</strong>: core image with ONLP installed</li>
+<li><strong>mion-onie-image-onlpv*</strong>: host with ONLP ONIE</li>
 </ul>
+<blockquote>
+<p>Not all platforms support all image configurations</p>
+</blockquote>
 <h2 id="multiconfig">Multiconfig</h2>
-<p>mion uses multiconfig to provide system profiles for either guest or 
+<p>mion utilizes multiconfig to provide system profiles for either guest or
 host (including non-container supporting images). We utilise this to enable
-endusers to use one image for multiple use cases, for example, using 
+end users to use one image for multiple use cases, for example, using
 mion-image-onlpv1 as both a QEMU image or an ONIE installer image.</p>
+<p>The following self explanatory config files can be found in
+<code>build/conf/multiconfig</code>:</p>
 <ul>
-<li><strong>guest.conf</strong>:        Used to build guests</li>
-<li><strong>host.conf</strong>:         Used to build hosts</li>
-<li><strong>host-mender.conf</strong>:  Used to build mender updatable hosts</li>
-<li><strong>host-onie.conf</strong>:    Used to build hosts packaged in ONIE installers</li>
+<li><strong>guest.conf</strong></li>
+<li><strong>host.conf</strong></li>
+<li><strong>host-mender.conf</strong></li>
+<li><strong>host-onie.conf</strong></li>
 </ul>
                 
               
