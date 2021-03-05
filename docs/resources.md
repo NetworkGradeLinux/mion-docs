@@ -1,46 +1,35 @@
+# Resources
 
-Resources
-=========
+## Mion
 
-[mion](https://mion.github.io)
-------------------------------
+* [Network Grade Linux](https://github.com/NetworkGradeLinux): Parent project of
+  mion
+* [mion](https://github.com/NetworkGradeLinux/mion): Base mion github repository
+* [meta-mion](https://github.com/NetworkGradeLinux/meta-mion): GitHub repository
+  for the base distro layer
+* [meta-mion-bsp](https://github.com/NetworkGradeLinux/meta-mion-bsp/)
+  Board/machine configurations and support layers
 
-* [mion](https://github.com/aps-networks/mion) Base Mion github repository.
-* [meta-mion](https://github.com/NetworkGradeLinux/meta-mion) GitHub repository for
-  the base layer
-* [meta-mion-stordis](https://github.com/NetworkGradeLinux/meta-mion-bsp/tree/dunfell/meta-mion-stordis)
-  reference platform layer for APS Networks (formerly STORDIS) BF2556x-1t
-  switch, with ONLPv1 support.
+## Yocto Project and OpenEmbedded
 
+* [The Yocto Project](https://www.yoctoproject.org/): Build environment and
+  system for custom embedded Linux Distributions. Maintains `bitbake`,
+  OpenEmbedded Core, and Poky.
 
-[The Yocto Project](https://www.yoctoproject.org/):
----------------------------------------------------
-Project that helps developers create custom Linux based systems regardless of
-hardware. Maintains `bitbake` and OpenEmbedded Core.
-
-* [__Poky__](https://www.yoctoproject.org/software-item/poky/): Reference distribution of OpenEmbedded maintained by Yocto Project
-* [__BitBake User Manual__](https://www.yoctoproject.org/docs/3.1.2/bitbake-user-manual/bitbake-user-manual.html): Has direct links for
+* [BitBake User Manual](https://docs.yoctoproject.org/bitbake/):
+  Direct links for:
   * Recipes
   * Configuration files
   * Classes
   * Layers
   * Append files
-* [Yocto Documentation](https://www.yoctoproject.org/docs/)
-* [Yocto Project Overview and Concepts Manual](https://www.yoctoproject.org/docs/3.1.2/overview-manual/overview-manual.html)
-* [Building your own recipes from first principles](https://wiki.yoctoproject.org/wiki/Building_your_own_recipes_from_first_principles)
-
-
-[OpenEmbedded](https://www.openembedded.org/wiki/Main_Page)
------------------------------------------------------------
-Build framework for embedded Linux
+* [Yocto Documentation](https://docs.yoctoproject.org/)
+* [Yocto Project Overview and Concepts Manual](https://docs.yoctoproject.org/overview-manual/index.html)
+* [OpenEmbedded](https://www.openembedded.org/wiki/Main_Page):Build framework
+  for embedded Linux
 * [OpenEmbedded-Core](https://www.openembedded.org/wiki/OpenEmbedded-Core):
   * Core support for machine architectures (x86-64, arm, etc)
-  * Only builds for QEMU machines, and not physical targets
-* [Layer](https://www.openembedded.org/Layers_FAQ): A collection of recipes and configuration that can be used on top of OpenEmbedded Core.
+  * Builds only for QEMU/emulated machines
+* [Layer](https://www.openembedded.org/Layers_FAQ): A collection of recipes and
+  configurations that can be used on top of OpenEmbedded Core.
 * [OpenEmbedded layer index](https://layers.openembedded.org/layerindex/branch/master/layers/)
-
-
-General
--------
-* [`runc`](https://github.com/opencontainers/runc) lightweight OCI container
-  runtime

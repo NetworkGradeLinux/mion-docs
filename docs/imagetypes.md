@@ -1,40 +1,34 @@
+# Image Types and Multiconfig
 
-Image Types and Multiconfig
-========
-
-Introduction
--------
 There are three main types of images in mion:
 
-* __guest images__:    Provide container images for the host OS
-* __host images__:     Small host image for running guests
-* __normal images__:   Provides a host image useful for bare image installs or ONIE installers
+* **guest images**: Provide container images for the host OS
+* **host images**:  Small host image for running guests
+* **core images**: Provides a host image useful for bare image installs or ONIE
+  installers
 
-As well as these image types there are also guest packaging recipes
-which package the guest images up and install them on the host image
-during build time. These are stored in recipes-core/mion-image-packaging
-and should be named in the format <image_name>-pkg
+## Image Configurations
 
+> where onlpv\* can be "onlpv1" *or* "onlpv2"
 
-Images
--------
+* **mion-guest-onlpv\***: guest with ONLP installed
+* **mion-host**: Host image for running guests
+* **mion-image-onlpv\***: core image with ONLP installed
+* **mion-onie-image-onlpv\***: host with ONLP ONIE
 
-* __mion-guest-onlpv1__: A small guest with ONLPv1 installed
-* __mion-guest-onlpv2__: A small guest with ONLPv2 installed
-* __mion-host__: Small host image for running guests.
-* __mion-image-onlpv1__: A small image with ONLPv1 installed
-* __mion-image-onlpv2__: A small image with ONLPv2 installed
+> Not all platforms support all image configurations
 
+## Multiconfig
 
-Multiconfig
--------
-
-mion uses multiconfig to provide system profiles for either guest or 
+mion utilizes multiconfig to provide system profiles for either guest or
 host (including non-container supporting images). We utilise this to enable
-endusers to use one image for multiple use cases, for example, using 
+end users to use one image for multiple use cases, for example, using
 mion-image-onlpv1 as both a QEMU image or an ONIE installer image.
 
-* __guest.conf__:        Used to build guests
-* __host.conf__:         Used to build hosts
-* __host-mender.conf__:  Used to build mender updatable hosts
-* __host-onie.conf__:    Used to build hosts packaged in ONIE installers
+The following self explanatory config files can be found in
+`build/conf/multiconfig`:
+
+* **guest.conf**
+* **host.conf**
+* **host-mender.conf**
+* **host-onie.conf**

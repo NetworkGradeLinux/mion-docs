@@ -51,14 +51,14 @@ The maintainers are generally listed within each repository `README.md`.
 
 Our maintainers are expected to model the Code of Conduct, and to address
 unacceptable behavior. Responses to possible violations are expected to be
-performed in a timely manor, while also taking the time to communicate with the
+performed in a timely fashion, while also taking the time to communicate with the
 project's leaders to ensure that any actions taken are done so in a thoughtful
-manor which represents our values.
+mannor which represents our values.
 
 ## Scope
 
 The scope extends to accounts which submit patches and pull requests, such as on
-github.
+Github.
 
 ## Enforcement
 
