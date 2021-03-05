@@ -1,28 +1,32 @@
-Installing mion
-========
+# Installing mion
 
-Introduction
--------
-The Mion 0.9 release currently supports a single platform - the **APS Networks (formerly STORDIS) BF2556X-1T**
+After building mion, images for installation and related artifacts can be found
+in `build/tmp-glibc/deploy/images/<MACHINE>/`. Files may differing depending on
+machine configuration.
 
-Image types
--------
+## Image types
 
-Two build options are provided which build different types of images depending on the intended installation method:
-* Mender images produce a <image_name>.hddimg file which can be written to a USB key and installed on bare metal
-* ONIE compliant image <image_name>.bin file which can be installed on a switch which has ONIE installed
+* Mender images(`<image_name>.hddimg`):
+  write to a USB key to install on bare metal
+* ONIE compliant images (`<image_name>.bin`): install on a switch with ONIE
+  installed
+  
+## Mender
 
-Mender
--------
-The mender image can be flashed to a USB key using the dd command or a similar tool and plugged into the switch.
-It will probably be necessary to change the boot order in in the switches UEFI (BIOS) so that it boots from the USB key.
-Once the USB key has sucessfully booted it will ask for confirmation to install the image
-**Pease not that this image is a bare metal image and will completly erase any other partitions such as ONIE or other installed OSes**
+Flash the mender image to a USB key `dd` or similar tool.
+If needed, change the boot order in UEFI (BIOS) to boot from the USB key. You
+will ask for confirmation to install the image.
 
-ONIE
--------
-The ONIE image .bin file can be transfered installed on the system using any of the ONIE supported installation methods found [here](https://opencomputeproject.github.io/onie/user-guide/index.html).
-In testing it has been found that a tftp server with a known hostname works well for installation but many other options are available.
-The ONIE will be installed alongside other existing OSes, will not erase any of the hard drive and automatically updates the boot options.
+> **This image is a bare metal image that erases any other partition, such as**
+  **ONIE or other installed OSes**
 
-**Please note that the ONIE image does not currently support the simple-runc container system tooling.**
+## ONIE
+
+The ONIE image can be installed on the system using any
+[ONIE supported installation method](https://opencomputeproject.github.io/onie/user-guide/index.html).
+
+> We recommend that you use a TFTP server with a known hostname for installation
+  however other options can be used.
+
+ONIE will be installed alongside other OS and will automatically update the boot
+options. **ONIE images do not currently support the simple-runc container system**

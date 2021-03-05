@@ -1,6 +1,8 @@
-This documentation is for **mion blasket-2020.12**, which uses Yocto Project **Dunfell**
+# Getting Started Guide
 
 ## Pre-Requirements
+
+This documentation is for dev/latest which uses Yocto Project **Dunfell**
 
 If you are new to Yocto Project development, check out [Overview and
 Concepts](https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html)
@@ -89,8 +91,8 @@ cd mion
 # To obtain related mion layers:
 git clone https://github.com/NetworkGradeLinux/meta-mion.git
 # Obtain the mion hardware layer
-git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
-
+git clone https://NetworkGradeLinux/meta-mion-bsp.git
+git clone https://NetworkGradeLinux/meta-mion-sde.git
 ```
 
 The main repository for mion contains sub-modules for OpenEmbedded and Yocto
@@ -135,6 +137,7 @@ that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
 ## Build Script Examples
 
 ```shell
+
 # Builds an ONLPV1 Guest, installs it on a mender updatable host and autostarts
 ../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1 -h host-mender:mion-host
 
@@ -149,6 +152,9 @@ that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
 
 # Emits the commandline to build an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
 ../mc_build.sh -e -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-mender:mion-host -d mion-guest-onlpv1
+# Builds a qemu image with ONLPV1, useful for testing purposes
+../mc_build.sh -v qemu -m qemux86-64 -h host-onie:mion-image-onlpv1
+
 ```
 
 ## Image Creation
@@ -191,5 +197,12 @@ down as follows:
 
 You're finally done with this guide? Now it's time for
 [Installing mion](installing_mion.md)!
+
+If you've built the qemu image, from the build directory, run:
+
+> runqemu may require setting up a tap interface. See `meta-mion-qemu/README`
+  for more information.
+
+`runqemu tmp-glibc/deploy/images/qemux86-64/`
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
