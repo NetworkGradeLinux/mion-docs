@@ -119,19 +119,8 @@ You can now get to work!
 
 ### Working On Main Documentation
 
-For anything that's in `mion-docs/docs/`, or changes `_config.yml`, you need
-to test using jekyll. If you don't have Jekyll installed,
-checkout these [instructions](https://jekyllrb.com/docs/installation/) for help.
-Once jekyll is installed, change to the top-level directory(`mion-docs`) on
-the command line, and run `bundle exec jekyll serve`. In your web browser,
-navigate to <http://localhost:4000> to see the changes.
-
-### Changes to Meta Documentation
-
-If you're working on this README or anything in either the wiki or in the
-_drafts folder, `_drafts`, you can easily view how the markdown will look
-using [grip](https://github.com/joeyespo/grip). See link for installation and
-use.
+TODO: This section as changed dramatically with the switch to mkdocs, please
+reach out to maintainer for help in the mean time
 
 ## Submitting Changes
 
