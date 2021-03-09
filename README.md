@@ -24,8 +24,6 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 * [Glossary](docs/glossary.md)
 
-* [I^2C Issues](docs/i2c-issues.md)
-
 * [Image Types](docs/imagetypes.md)
 
 * [Installing mion](docs/installing_mion.md)
@@ -34,9 +32,7 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Structure/Directory layout
 
-General documentation can be found under `docs/`, except for `index.md`, which
-is in the top directory. Also in the top directory is this README and the
-license file.
+General documentation can be found under `docs/`.
 
 You can find the documentation style guide, mion-docs meeting minutes, our git
 workflow, and other materials related to mion development in our
