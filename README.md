@@ -10,8 +10,6 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Documentation Links
 
-* [About](docs/about.md)
-
 * [Accessibility](docs/ACCESSIBILITY.md)
 
 * [Code of Conduct](docs/community/code-of-conduct.md)
