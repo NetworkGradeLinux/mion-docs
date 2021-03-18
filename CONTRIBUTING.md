@@ -2,8 +2,27 @@
 
 Welcome to mion-docs! Here you can find info on how to contribute to mion-docs.
 If you want to contribute to another part of the project, please see the general
-contributing documentation
-[here](https://github.com/NetworkGradeLinux/mion/blob/dunfell/CONTRIBUTING.md).
+[contributing documentation](https://github.com/NetworkGradeLinux/mion/blob/dunfell/CONTRIBUTING.md).
+
+Previously, contributing to mion-docs required following a workflow very similar
+to the other repositories. This approach is still encouraged, especially if
+you're new to our workflow or contributing to open source. However, if you need
+to just submit a change and are already set up on GitHub, submit a pull
+request from a branch or fork, or send the docs-maintainer a patch when you're
+done, and once approved, the gh-pages branch will be updated by the maintainer.
+
+Want to know how to preview changes to `docs.mion.io` on your computer? Or how
+to get started with git?  What if you're new to our community and want to get
+a good grasp on what are workflow is like? Read on!
+
+> mion-docs also has a [wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki),
+which is used for developer documentation, such as testing procedures, meeting
+minutes, and other information that relates to the development of mion. The wiki
+does not require the same setup of the rest of the documentation, and can be
+edited directly from GitHub. That said, please let other developers know if you
+are editing a page to avoid overlap/merge conflicts. Please write pages in
+Markdown. If you chose to edit it locally, like the doc maintainer, take extra
+care, and note that the wiki does not have multiple branches.
 
 ## Table of Contents
 
@@ -29,12 +48,13 @@ though an overview is provided below.
 
 * All documentation is expected to follow the [mion style guide](https://github.com/NetworkGradeLinux/mion-docs/wiki/style_guide).
 
-Lastly, find or report an issue [here](https://github.com/NetworkGradeLinux/mion-docs/issues).
-For existing issues, add a comment that you'd like the issue assigned to you.
-You can also open an issue, if you've been added to the docs team.
-If you're not part of the team, let a maintainer know, and we can help add you.
+You can find or report an issue at [mion-docs](https://github.com/NetworkGradeLinux/mion-docs/issues).
+For existing issues, add a comment that you'd like the issue assigned to you, or
+attend the [fortnightly bug-scrub](https://docs.mion.io/latest/community/Community/)
+listed on our community about page.
 
-> Look for ones labeled `good first issue` if you haven't contributed yet.
+> Look for ones labeled `good first issue` if you haven't contributed yet. These
+tend to be easier bugs for newcomers to work on.
 
 ## Setup
 
@@ -47,16 +67,16 @@ offer assistance.
 In any of the following examples the command line/terminal, lines that start
 with `#` are comments, so don't worry about them if you want to copy/paste.
 
-If you don't already have an account on github, go to <https://github.com/join>
+If you don't already have an account on GitHub, go to <https://github.com/join>
 
 ### Authentication
 
-You need to tell github that you're you!
-If you haven't verified your email with github, you will need to do so.
+You need to tell GitHub that you're you!
+If you haven't verified your email, you will need to do so.
 See <https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/verifying-your-email-address>
 for how to do so.
 
-Configuring git with your name and the email account used on github
+Configuring git with your name and the email account used on GitHub
 Open a terminal:
 
 > `ctrl+alt+T` with Ubuntu, or just do an application search for "term"
@@ -81,13 +101,13 @@ authentication, see
 
 ### Getting the source
 
-If you have ssh enabled in github:
+If you have ssh enabled:
 `git clone git@github.com:NetworkGradeLinux/mion-docs.git`
 
 Otherwise:
 `git clone https://github.com/NetworkGradeLinux/mion-docs.git`
 
-All the documentation files will now be in the folder `mion-docs`.
+All the documentation files will now be in the folder `mion-docs/docs`.
 
 ## Making Changes to Documentation
 
@@ -96,9 +116,9 @@ nano, you can use one with a graphic interface. These include
 gedit(if you use a gnome based desktop such as Ubuntu), kate(KDE desktop)
 TextEdit, and notepad, and you likely already have one installed by default.
 
-Before making any changes, create a new branch with your github username
+Before making any changes, create a new branch with your GitHub username
 followed by a slash(/) then a bit describing what you're changing in just a few
-words separated by a dash(-) and no spaces. For example, "fix-readme-typo",
+words separated by a dash(-) and no spaces. For example, "fix-readme-typo" or
 "glossary-updates". You'll get to explain in more detail when it comes time to
 commit. This format helps keep track of changes and allows maintainers have a
 quick idea of what is being submitted and by whom.
@@ -109,7 +129,7 @@ In a terminal:
 # change into the mion-docs directory
 cd mion-docs
 
-# replace "userName" with your github name and "what-you-are-changing" with
+# replace "userName" with your GitHub username and "what-you-are-changing" with
 # just that
 
 git checkout -b userName/what-you-are-changing
@@ -117,15 +137,28 @@ git checkout -b userName/what-you-are-changing
 
 You can now get to work!
 
-### Working On Main Documentation
+We use [MkDocs](https://www.mkdocs.org/) with the
+[MkDocs-material theme](https://github.com/squidfunk/mkdocs-material) and
+the [mike versioning utility](https://github.com/jimporter/mike) to generate and
+publish our documentation. In most cases you will not need to check versioning,
+and can ignore `mike`. To install `MkDocs` and the theme, all you have to do is
+install the theme using Python's `pip`. On the command line:
+`pip install mkdocs-material`. This will also install all the dependencies. You
+may have to install pip, which can be installed using the package manager
+available to you. Feel free to ask a maintainer if you need help.
 
-TODO: This section as changed dramatically with the switch to mkdocs, please
-reach out to maintainer for help in the mean time
+As you make changes, run `mkdocs serve` on the command line. In a browser,
+navigate to <http://127.0.0.1:8000> to see your changes and to ensure everything
+looks correct when rendered into html. If making
+changes to formatting, make sure to [check accessibility](https://docs.mion.io/latest/ACCESSIBILITY/).
 
 ## Submitting Changes
 
 Done making changes? Everything looks good? Then it's time to add your file and
 commit.
+
+> Important: Never push to the `gh-pages`. This is to be done by a maintainer
+once your changes are approved.
 
 In a terminal:
 
@@ -134,7 +167,6 @@ In a terminal:
 git add path/filename
 
 # commit time!
-
 git commit --signoff
 ```
 
@@ -145,14 +177,7 @@ If you need help with the commit message, refer back to
 [git workflow](https://github.com/NetworkGradeLinux/mion-docs/wiki/git_commandments)
 or ask another member of the docs team.
 
-**If you made multiple commits on your branch** before finishing up and putting
-in a pull request, be sure to rebase and squash/fixup so that you're submitting
-only one change to be merged into the main branch:
-[github git rebase tutorial](https://docs.github.com/en/free-pro-team@latest/github/using-git/using-git-rebase-on-the-command-line#pushing-rebased-code-to-github)
-> Git rebase can take a bit to get the hang of! Please don't hesitate to ask for
-help!
-
-Almost done! Now it's time to push your branch onto github:
+Almost done! Now it's time to push your branch onto GitHub:
 `git push -u origin username/what-you-are-changing`
 
 Lastly, go to <https://github.com/NetworkGradeLinux/mion-docs> and submit a pull
