@@ -26,12 +26,13 @@ nav:
 theme:
     name: material
     scheme: mion
-    custom_dir: overrides
+      #custom_dir: overrides
     logo: assets/images/mion-colour-small.png
 
+      #extra_css:
+      #  - stylesheets/color_schemes/mion.css
 extra_css:
-  - stylesheets/color_schemes/mion.css
-
+  - stylesheets/extra.css
 # add attribute list extension to allow for html/CSS  for markdown elements,
 # primarily to allow for image sizing and alignment
   - css/version-select.css
@@ -50,4 +51,3 @@ extra_javascript:
 extra:
     version:
         method: mike
-
