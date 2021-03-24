@@ -10,6 +10,7 @@ nav:
   - Home: index.md
   - Getting Started Guide: getting-started.md
   - Installing mion: installing_mion.md
+  - Supported switches: supported-switches.md
   - Resources: resources.md
   - Image Types: imagetypes.md
   - Trusted Platform Module: trusted-platform-module.md
