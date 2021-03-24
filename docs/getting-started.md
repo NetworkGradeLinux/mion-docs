@@ -91,8 +91,8 @@ cd mion
 # To obtain related mion layers:
 git clone https://github.com/NetworkGradeLinux/meta-mion.git
 # Obtain the mion hardware layer
-git clone https://NetworkGradeLinux/meta-mion-bsp.git
-git clone https://NetworkGradeLinux/meta-mion-sde.git
+git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
+git clone https://github.com/NetworkGradeLinux/meta-mion-sde.git
 ```
 
 The main repository for mion contains sub-modules for OpenEmbedded and Yocto
