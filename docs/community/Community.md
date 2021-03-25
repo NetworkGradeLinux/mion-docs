@@ -16,6 +16,10 @@ Each repository may have different requirements for contributing, in which case
 it can be found in the `CONTRIBUTING.md` in the repository's root. For an
 overview of how to contribute, including patch guidelines and git workflow, see
 [mion/CONTRIBUTING.md](https://github.com/NetworkGradeLinux/mion/blob/dunfell/CONTRIBUTING.md).
+We also have our
+[developer wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki) with
+meeting minutes, development process, and other information for those who are
+getting involved with contributing.
 
 ## Getting in Touch
 
