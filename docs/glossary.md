@@ -2,12 +2,13 @@
 
 ## Yocto Project and mion
 
-* **mion**: Mini Infrastucture Operating System for Networks - mion.io
-* **Open Embedded**
+* **mion**: Mini Infrastucture Operating System for Networks
+* **Open Embedded**: [Build framework](https://www.openembedded.org/wiki/Main_Page)
+  used by the Yocto Project
 * **recipe**: a set of instructions related to the fetching, building, or
   installation of a program within the Yocto Project
 * **Yocto Project**: [build system for custom embedded Linux distros](https://www.yoctoproject.org/)
-  
+
 ## Switch/Networking Terms and Projects
 
 * **i2c**: Inter-IC, a simple device communications bus

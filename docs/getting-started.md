@@ -2,10 +2,9 @@
 
 ## Pre-Requirements
 
-This documentation is for dev/latest which uses Yocto Project **Dunfell**
+> This documentation is for 2021.03 Blasket, which uses Yocto Project **Dunfell**
 
-If you are new to Yocto Project development, check out [Overview and
-Concepts](https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html)
+If you are new to Yocto Project development, check out [Overview and Concepts](https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html)
 and the [Quick Build](https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html)
 guide to set up your build host and become familiar with the workflow. We
 provide a quick overview below. Already familiar and want to get started
@@ -16,19 +15,19 @@ for a quick-start guide.
 
 Whether on a laptop or a high-powered build server, make sure that...
 
-- You have 50 GB available
+* You have 50 GB available
 
 > *Why so much when the resulting image is so tiny? Think of it as a small cake;
 Even if the end result can fit in a small box, you will still need a whole
 kitchen in order to bake it.*
 
-- git 1.8.3.1 or greater
+* git 1.8.3.1 or greater
 
-- tar 1.28 or greater
+* tar 1.28 or greater
 
-- python 3.5.0 or greater
+* python 3.5.0 or greater
 
-- gcc 5.0 or greater
+* gcc 5.0 or greater
 
 ### Ubuntu (16.04 -18.04) and Debian GNU/Linux (8.x-10.x)
 
@@ -189,11 +188,11 @@ Plan on the initial run to take some time, with following builds being much
 less. For a Linux VM with V Virtual CPUs and 32G RAM, a build will likely break
 down as follows:
 
-- *Fetching sources and setting up build environment*: **5 minutes**
+* *Fetching sources and setting up build environment*: **5 minutes**
 
-- *Building of the image*: **3 hours**
+* *Building of the image*: **3 hours**
 
-- *Deploying mion via ONIE*: **5 minutes per switch**
+* *Deploying mion via ONIE*: **5 minutes per switch**
 
 You're finally done with this guide? Now it's time for
 [Installing mion](installing_mion.md)!
@@ -201,8 +200,7 @@ You're finally done with this guide? Now it's time for
 If you've built the qemu image, from the build directory, run:
 
 > runqemu may require setting up a tap interface. See `meta-mion-qemu/README`
-  for more information.
+for more information.
 
 `runqemu tmp-glibc/deploy/images/qemux86-64/`
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

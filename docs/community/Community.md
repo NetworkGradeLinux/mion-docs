@@ -24,17 +24,19 @@ getting involved with contributing.
 ## Getting in Touch
 
 The best way to get in touch is [Slack](https://networkgradelinux.slack.com),
-or you can attend one of our public meetings.
+or you can attend one of our public meetings. For anything related to
+documentation you can email our [documentation maintainer](igorina@toganlabs.com).
 
 ### Slack
 
-All are welcome to stop by, introduce themselves, and say hi to us over on Slack!
+All are welcome to stop by, introduce themselves, and say hi to us over on
+Slack!
 
 Here's our current Slack channels, and what each are used for:
 
-* **general:** news, announcements and project wide discussions, good place to introduce
-  yourself to everyone!
-* **gh-notify:** reserved for automated Github updates on CI builds, issue
+* **general:** news, announcements and project wide discussions, good place to
+  introduce yourself to everyone!
+* **gh-notify:** reserved for automated GitHub updates on CI builds, issue
   statuses, and pull requests
 * **network-grade-linux:** mostly technical discussions, this is where you
   should ask questions regarding mion

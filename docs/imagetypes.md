@@ -3,7 +3,7 @@
 There are three main types of images in mion:
 
 * **guest images**: Provide container images for the host OS
-* **host images**:  Small host image for running guests
+* **host images**: Small host image for running guests
 * **core images**: Provides a host image useful for bare image installs or ONIE
   installers
 
@@ -20,12 +20,12 @@ There are three main types of images in mion:
 
 ## Multiconfig
 
-mion utilizes multiconfig to provide system profiles for either guest or
-host (including non-container supporting images). We utilise this to enable
-end users to use one image for multiple use cases, for example, using
-mion-image-onlpv1 as both a QEMU image or an ONIE installer image.
+mion utilizes multiconfig to provide system profiles for guest and host
+(including non-container supporting images). This enables end users to use one
+image for multiple use cases, for example, using mion-image-onlpv1 as both a
+QEMU image or an ONIE installer image.
 
-The following self explanatory config files can be found in
+The following self-explanatory config files can be found in
 `build/conf/multiconfig`:
 
 * **guest.conf**

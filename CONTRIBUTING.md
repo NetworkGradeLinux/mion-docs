@@ -37,14 +37,14 @@ care, and note that the wiki does not have multiple branches.
 ## Before You Begin
 
 * Please read our [Code of Conduct](docs/community/code-of-conduct.md)
-and our [interpretation](docs/community/Coc-interpretation). By contributing to
-the project, you agree that you've read and will follow the Code of Conduct.
+  and our [interpretation](docs/community/Coc-interpretation). By contributing to
+  the project, you agree that you've read and will follow the Code of Conduct.
 
 * The documentation is written using Markdown; see <https://www.markdownguide.org/>
-for reference.
+  for reference.
 
 * Read and become familiar with our [git workflow](https://github.com/NetworkGradeLinux/mion-docs/wiki/git_commandments),
-though an overview is provided below.
+  though an overview is provided below.
 
 * All documentation is expected to follow the [mion style guide](https://github.com/NetworkGradeLinux/mion-docs/wiki/style_guide).
 
