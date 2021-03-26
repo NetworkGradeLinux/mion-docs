@@ -1,10 +1,12 @@
 # Resources
 
-## Mion
+## mion
 
+* [mion developer wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki):
+  information regarding the internal development of mion and work in progress
 * [Network Grade Linux](https://github.com/NetworkGradeLinux): Parent project of
   mion
-* [mion](https://github.com/NetworkGradeLinux/mion): Base mion github repository
+* [mion](https://github.com/NetworkGradeLinux/mion): Base mion GitHub repository
 * [meta-mion](https://github.com/NetworkGradeLinux/meta-mion): GitHub repository
   for the base distro layer
 * [meta-mion-bsp](https://github.com/NetworkGradeLinux/meta-mion-bsp/)
