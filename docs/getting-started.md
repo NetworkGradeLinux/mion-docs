@@ -2,7 +2,7 @@
 
 ## Pre-Requirements
 
-> This documentation is for 2021.03 Blasket, which uses Yocto Project **Dunfell**
+> This documentation is for 2021.03 "Copeland", which uses Yocto Project **Dunfell**
 
 If you are new to Yocto Project development, check out [Overview and Concepts](https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html)
 and the [Quick Build](https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html)
