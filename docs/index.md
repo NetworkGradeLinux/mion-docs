@@ -7,7 +7,7 @@ security and supportability at it's core.
 
 [View it on GitHub](https://github.com/NetworkGradeLinux/mion-docs)
 
-> Welcome! This documentation is for **2021.03 Blasket**. For other versions
+> Welcome! This documentation is for **2021.03 Copeland**. For other versions
 check the version selector in the upper left menu.
 
 mion provides a network operating system(NOS) focusing on enterprise level
@@ -36,8 +36,7 @@ see our [community](https://docs.mion.io/latest/community/Community/) page.
 > © 2021 Network Grade Linux. Copyright © 2021 Network Grade Linux The Linux
 Foundation®. All rights reserved. The Linux Foundation has registered
 trademarks and uses trademarks. For a list of trademarks of The Linux
-Foundation, please see our
-[Trademark Usage page](https://www.linuxfoundation.org/trademark-usage) page.
+Foundation, please see our [Trademark Usage page](https://www.linuxfoundation.org/trademark-usage) page.
 Linux is a registered trademark of Linus Torvalds.
 [Privacy Policy](https://www.linuxfoundation.org/privacy)
 and [Terms of Use](https://www.linuxfoundation.org/terms).
