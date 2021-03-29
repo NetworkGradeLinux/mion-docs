@@ -1,8 +1,8 @@
 site_name: mion docs
 repo_url: https://github.com/NetworkGradeLinux/mion/
 site_description: Documentation for Network Grade Linux mion
+edit_uri: ""
 
-# this may need changing...  
 remote_branch: gh-pages
 remote_name: dunfell
 
@@ -10,10 +10,13 @@ nav:
   - Home: index.md
   - Getting Started Guide: getting-started.md
   - Installing mion: installing_mion.md
-  - Supported switches: supported-switches.md
+  - Supported Switches: supported-switches.md
   - Resources: resources.md
   - Image Types: imagetypes.md
   - Glossary: glossary.md
+  - Adds and Ends: adds-and-ends.md
+  - Release Notes: 
+      - 2021.03: release_notes/2021-03.md
   - Accessibility: ACCESSIBILITY.md
   - Community:
       - About our Community: community/Community.md
@@ -21,7 +24,6 @@ nav:
       - CoC Interpretation: community/Coc-interpretation.md
   - Adds and Ends: adds-and-ends.md
   - Acknowedgements: acknowledgements.md
-
 
 # Theme settings
 theme:

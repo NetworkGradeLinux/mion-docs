@@ -7,8 +7,8 @@ security and supportability at it's core.
 
 [View it on GitHub](https://github.com/NetworkGradeLinux/mion-docs)
 
-> Welcome to our mion documentation site. Before continuing, it's
-always a good idea to check the version selector in the upper left menu.
+> Welcome! This documentation is for **2021.03 Copeland**. For other versions
+check the version selector in the upper left menu.
 
 mion provides a network operating system(NOS) focusing on enterprise level
 managed switches with support for the [Open Network Install Environment(ONIE)](http://onie.org/)
