@@ -6,7 +6,7 @@ fully tested, or were newly added right before a release, and may be of
 interest. Lastly, there're features or package will be phased out of mion.
 
 > This is also a good time to remind you to check that you're reading the
- correct documentation version.
+correct documentation version.
 
 Read the [release notes](release_notes/2021-03.md) for full list of changes.
 
@@ -15,7 +15,6 @@ Read the [release notes](release_notes/2021-03.md) for full list of changes.
 ### Trusted Platform Module
 
 #### Trusted Platform Module (TPM) support in mion
-
 
 TPM support is provided by the
 [`meta-security/meta-tpm`](https://git.yoctoproject.org/cgit/cgit.cgi/meta-security)
