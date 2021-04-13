@@ -1,4 +1,4 @@
-# mion
+# mion-docs
 
 ## Summary
 - Description: _brief description of the bug that was fixed or the enhancement that was added_
