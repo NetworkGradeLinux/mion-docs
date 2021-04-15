@@ -139,9 +139,6 @@ that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
 
 ```shell
 
-# Builds an ONLPV1 Guest, installs it on a mender updatable host and autostarts
-../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1 -h host-mender:mion-host
-
 # Builds just an ONLPV1 Guest. Useful for creating update artifacts.
 ../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1
 
@@ -149,10 +146,10 @@ that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
 ../mc_build.sh -m stordis-bf2556x-1t -h host-onie:mion-onie-image-onlpv1
 
 # Builds an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
-../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-mender:mion-host -d mion-guest-onlpv1
+../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-onie:mion-host -d mion-guest-onlpv1
 
 # Emits the commandline to build an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
-../mc_build.sh -e -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-mender:mion-host -d mion-guest-onlpv1
+../mc_build.sh -e -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-onie:mion-host -d mion-guest-onlpv1
 # Builds a qemu image with ONLPV1, useful for testing purposes
 ../mc_build.sh -v qemu -m qemux86-64 -h host-onie:mion-image-onlpv1
 
