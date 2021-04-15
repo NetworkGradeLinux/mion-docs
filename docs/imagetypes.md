@@ -30,5 +30,4 @@ The following self-explanatory config files can be found in
 
 * **guest.conf**
 * **host.conf**
-* **host-mender.conf**
 * **host-onie.conf**

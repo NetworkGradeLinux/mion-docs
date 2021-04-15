@@ -6,19 +6,13 @@ machine configuration.
 
 ## Image types
 
-* Mender images(`<image_name>.hddimg`):
-  write to a USB key to install on bare metal
 * ONIE compliant images (`<image_name>.bin`): install on a switch with ONIE
   installed
 
-## Mender
+## Mender (DEPRECATED)
 
-Flash the mender image to a USB key `dd` or similar tool.
-If needed, change the boot order in UEFI (BIOS) to boot from the USB key. You
-will ask for confirmation to install the image.
-
-> **This image is a bare metal image that erases any other partition, such as**
-**ONIE or other installed OSes**
+Mender images are no longer included **after**
+["Copeland"](https://docs.mion.io/2021.03/installing_mion/).
 
 ## ONIE
 
