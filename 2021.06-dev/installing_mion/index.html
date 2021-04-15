@@ -271,8 +271,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mender" class="md-nav__link">
-    Mender
+  <a href="#mender-deprecated" class="md-nav__link">
+    Mender (DEPRECATED)
   </a>
   
 </li>
@@ -552,8 +552,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mender" class="md-nav__link">
-    Mender
+  <a href="#mender-deprecated" class="md-nav__link">
+    Mender (DEPRECATED)
   </a>
   
 </li>
@@ -584,19 +584,12 @@ in <code>build/tmp-glibc/deploy/images/&lt;MACHINE&gt;/</code>. Files may differ
 machine configuration.</p>
 <h2 id="image-types">Image types</h2>
 <ul>
-<li>Mender images(<code>&lt;image_name&gt;.hddimg</code>):
-  write to a USB key to install on bare metal</li>
 <li>ONIE compliant images (<code>&lt;image_name&gt;.bin</code>): install on a switch with ONIE
   installed</li>
 </ul>
-<h2 id="mender">Mender</h2>
-<p>Flash the mender image to a USB key <code>dd</code> or similar tool.
-If needed, change the boot order in UEFI (BIOS) to boot from the USB key. You
-will ask for confirmation to install the image.</p>
-<blockquote>
-<p><strong>This image is a bare metal image that erases any other partition, such as</strong>
-<strong>ONIE or other installed OSes</strong></p>
-</blockquote>
+<h2 id="mender-deprecated">Mender (DEPRECATED)</h2>
+<p>Mender images are no longer included <strong>after</strong>
+<a href="https://docs.mion.io/2021.03/installing_mion/">"Copeland"</a>.</p>
 <h2 id="onie">ONIE</h2>
 <p>The ONIE image can be installed on the system using any
 <a href="https://opencomputeproject.github.io/onie/user-guide/index.html">ONIE supported installation method</a>.</p>
