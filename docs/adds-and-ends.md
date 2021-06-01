@@ -67,3 +67,12 @@ version of `ln` doesn't support the `--relative` argument.
 
 However, this isn't the issue in most mion use-cases. We now offer the
 utilities with full functionality.
+
+### meta-mion-srunc
+
+The original container solution in Mion, known as srunc, has been depricated
+and moved from meta-mion to [meta-mion-unsupported](https://github.com/NetworkGradeLinux/meta-mion-unsupported). This resulted in the
+meta-mion repo being restructured so that the main meta-mion layer is at the
+top level of the repo. This breaking change requires the
+`build/conf/bblayers.conf` file to match the new structure of the meta-mion
+repo or it will cause a build error.
