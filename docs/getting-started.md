@@ -100,7 +100,7 @@ The main repository for mion contains sub-modules for OpenEmbedded and Yocto
 Project of layers which mion depends on. To properly clone them, rather than
 just the top directory, the `--recursive` argument is required.
 
-`mion` provides the build script (mc_build.sh) and configuration files in
+`mion` provides the build script (cronie.sh) and configuration files in
 `build/conf/`.
 
 The `meta-mion` layer provides mion distro configuration.
@@ -114,44 +114,35 @@ source openembedded-core/oe-init-build-env
 ```
 
 This will place you in the `build` directory.
-Afterwords you can use our build script. Running `../mc_build.sh` without
+Afterwords you can use our build script. Running `../cronie.sh` without
 arguments displays basic usage. **In general:**
 
 ```shell
-../mc_build.sh -m <machine> -c <container config>:<container image> -h <host config>:<host_image> -d container_image
+../cronie.sh -m <machine> image
 ```
 
 To do a "dry run" without running a build, add `-e` which emits what would have
-run if you ran this from bitbake. If you want to disable the auto-starting of
-the container, use -d with a comma delineated list of the container image name.
+run if you ran this from bitbake. 
 
 If you are familiar with Yocto Project development and multiconfig and wish to
 use bitbake directly for builds, see the `local.conf` for variables that need to
-be set. You can also get the variables by running the `mc_build.sh` script with
+be set. You can also get the variables by running the `cronie.sh` script with
 the build variables you wish to use along with the `-e` option and prepending
 the `BB_ENV_EXTRAWHITE` output to the bitbake command you which to use in order
 to pass them in on the command line.
 
 > Note: The script can not always determine the vendor name, if you encounter
-that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
+that issue, or just want to be sure, you can use `-v <VENDOR>` to specify.
 
 ## Build Script Examples
 
 ```shell
 
-# Builds just an ONLPV1 Guest. Useful for creating update artifacts.
-../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1
+# Builds just an ONLPV1 image onie image
+../cronie.sh -m stordis-bf2556x-1t mion-guest-onlpv1
 
-# Builds an ONLPV1 ONIE image
-../mc_build.sh -m stordis-bf2556x-1t -h host-onie:mion-onie-image-onlpv1
-
-# Builds an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
-../mc_build.sh -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-onie:mion-host -d mion-guest-onlpv1
-
-# Emits the commandline to build an image with ONLPV2 and ONLPV1 guests but disables ONLPV1 guest
-../mc_build.sh -e -m stordis-bf2556x-1t -c guest:mion-guest-onlpv1,guest:mion-guest-onlpv2 -h host-onie:mion-host -d mion-guest-onlpv1
 # Builds a qemu image with ONLPV1, useful for testing purposes
-../mc_build.sh -v qemu -m qemux86-64 -h host-onie:mion-image-onlpv1
+../cronie.sh -v qemu -m qemux86-64 mion-image-onlpv1
 
 ```
 
@@ -160,7 +151,7 @@ that issue,or just want to be sure, you can use `-v <VENDOR>` to specify.
 Once you've gone through the pre-requirements, have your build host set up, and
 looked at the build script examples, you're ready to create an image yourself.
 
-After you run the mc_build.sh script, bitbake gets called, first parsing all
+After you run the `cronie.sh` script, bitbake gets called, first parsing all
 the recipes and making sure your `local.conf` and `bblayers.conf` looks good,
 before going to work "baking" your image!
 
