@@ -11,6 +11,10 @@
   for the base distro layer
 * [meta-mion-bsp](https://github.com/NetworkGradeLinux/meta-mion-bsp/)
   Board/machine configurations and support layers
+* [meta-mion-sde](https://github.com/NetworkGradeLinux/meta-mion-sde/)
+  Recipes needed to enable switch ASIC functionality
+* [meta-mion-backports](https://github.com/NetworkGradeLinux/meta-mion-backports/)
+  Recipes backported from other Yocto project repos
 
 ## Yocto Project and OpenEmbedded
 

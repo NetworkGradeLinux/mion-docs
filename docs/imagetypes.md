@@ -1,34 +1,42 @@
-# Image Types and Multiconfig
+# containerd 
 
-There are three main types of images in mion:
+There are many types of container tools available on Lunux systems but in the
+interest of keeping things simple Mion only includes [containerd](https://containerd.io/) and its
+dependencies in the default image. There are two main ways of working with containerd
 
-* **guest images**: Provide container images for the host OS
-* **host images**: Small host image for running guests
-* **core images**: Provides a host image useful for bare image installs or ONIE
-  installers
+In order to work with containerd, it will be necessary to ensure that the
+service has been started:
 
-## Image Configurations
+```
+systemctl enable containerd
+systemctl start containerd
+```
 
-> where onlpv\* can be "onlpv1" *or* "onlpv2"
+There are two main ways of interacting with conatinerd:
 
-* **mion-guest-onlpv\***: guest with ONLP installed
-* **mion-host**: Host image for running guests
-* **mion-image-onlpv\***: core image with ONLP installed
-* **mion-onie-image-onlpv\***: host with ONLP ONIE
+- The containerd command line tool [containerd-ctr](https://github.com/projectatomic/containerd/blob/master/docs/cli.md) provides access to most
+of the main functionality
+- Alternatively, containerd can be controlled through the provided [API](https://github.com/containerd/containerd/blob/master/README.md) 
+however this will probably require the installation of additional packages
+(languages or libraries) which are not included on the default image
 
-> Not all platforms support all image configurations
+# k3s - Lightweight Kubernetes
 
-## Multiconfig
+The [k3s](https://github.com/k3s-io/k3s/blob/master/README.md) Lightweight Kubernetes distributaion
+is not available in the dunfell branch of meta-virtualisation so it has been
+backported to [meta-mion-backports](https://github.com/NetworkGradeLinux/meta-mion-backports)
 
-mion utilizes multiconfig to provide system profiles for guest and host
-(including non-container supporting images). This enables end users to use one
-image for multiple use cases, for example, using mion-image-onlpv1 as both a
-QEMU image or an ONIE installer image.
+Please note that although the code has been backported and will be supported by
+the project, the code is largely untested and may not be suitable for a
+production environment
 
-The following self-explanatory config files can be found in
-`build/conf/multiconfig`:
+# Multiconfig and mc_build.sh
 
-* **guest.conf**
-* **host.conf**
-* **host-mender.conf**
-* **host-onie.conf**
+The prvious custom container solution, known as srunc, is no longer supported
+in Mion and has been move to [meta-mion-unsupported](https://github.com/NetworkGradeLinux/meta-mion-unsupported). The functionality hes
+been replaced with the containerd and k3s solutions above but is still present
+if required.
+
+The multiconfig based images and the use of mc_build.sh are not currently the
+default means of building images within Mion but have been retained as they
+will possibly be reurposed in future releases.
