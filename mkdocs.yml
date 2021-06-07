@@ -12,7 +12,7 @@ nav:
   - Installing mion: installing_mion.md
   - Supported Switches: supported-switches.md
   - Resources: resources.md
-  - Image Types: imagetypes.md
+  - mion Container Support: mion-container-support.md
   - Glossary: glossary.md
   - Adds and Ends: adds-and-ends.md
   - Release Notes: 
