@@ -2,14 +2,13 @@
 
 ## Pre-Requirements
 
-> This documentation is for the active **dev** version, which will become the
-2021.06 release
+> This documentation is for mion dunfell-2021.06 "Dernish" release
 
 If you are new to Yocto Project development, check out [Overview and Concepts](https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html)
 and the [Quick Build](https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html)
 guide to set up your build host and become familiar with the workflow. We
 provide a quick overview below. Already familiar and want to get started
-building mion? Then checkout the mion [README](https://github.com/NetworkGradeLinux/mion)
+building mion? Then check out the mion [README](https://github.com/NetworkGradeLinux/mion)
 for a quick-start guide.
 
 ## Build Host
@@ -83,27 +82,26 @@ We added the cake.*
 
 ## Obtaining mion Sources
 
-If you are ready to start building mion:
+You're almost ready. Obtain the *required* mion bitbake layers:
 
 ```shell
+# To clone the submodules, `--recursive` is required
 git clone --recursive https://github.com/NetworkGradeLinux/mion.git
 cd mion
-# To obtain related mion layers:
+# To obtain mion distro layer:
 git clone https://github.com/NetworkGradeLinux/meta-mion.git
-# Obtain the mion hardware layer
+# Obtain the mion hardware layers
 git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
-# meta-mion-sde is optional
-git clone https://github.com/NetworkGradeLinux/meta-mion-sde.git
+# Backports for upstream repos not currently in the LTS release
+git clone https://github.com/NetworkGradeLinux/meta-mion-backports.git
 ```
 
-The main repository for mion contains sub-modules for OpenEmbedded and Yocto
-Project of layers which mion depends on. To properly clone them, rather than
-just the top directory, the `--recursive` argument is required.
 
 `mion` provides the build script (cronie.sh) and configuration files in
-`build/conf/`.
+`build/conf/`. The `meta-mion` layer provides mion distro configuration, and
+`meta-mion-bsp` is were support and configuration is found.
 
-The `meta-mion` layer provides mion distro configuration.
+> 
 
 ## Basic Usage
 
@@ -118,18 +116,11 @@ Afterwords you can use our build script. Running `../cronie.sh` without
 arguments displays basic usage. **In general:**
 
 ```shell
-../cronie.sh -m <machine> image
+../cronie.sh -m <machine> <image>
 ```
 
 To do a "dry run" without running a build, add `-e` which emits what would have
-run if you ran this from bitbake. 
-
-If you are familiar with Yocto Project development and multiconfig and wish to
-use bitbake directly for builds, see the `local.conf` for variables that need to
-be set. You can also get the variables by running the `cronie.sh` script with
-the build variables you wish to use along with the `-e` option and prepending
-the `BB_ENV_EXTRAWHITE` output to the bitbake command you which to use in order
-to pass them in on the command line.
+run if you ran this from bitbake.
 
 > Note: The script can not always determine the vendor name, if you encounter
 that issue, or just want to be sure, you can use `-v <VENDOR>` to specify.
@@ -138,11 +129,11 @@ that issue, or just want to be sure, you can use `-v <VENDOR>` to specify.
 
 ```shell
 
-# Builds just an ONLPV1 image onie image
-../cronie.sh -m stordis-bf2556x-1t mion-guest-onlpv1
+# Builds an ONLPV1 image onie image
+../cronie.sh -m stordis-bf2556x-1t mion-onie-image-onlpv1
 
-# Builds a qemu image with ONLPV1, useful for testing purposes
-../cronie.sh -v qemu -m qemux86-64 mion-image-onlpv1
+# Builds the qemu image with ONLPV1 with p-test support
+../cronie.sh -v qemu -m qemux86-64 mion-onie-image-onlpv1-ptest
 
 ```
 
@@ -151,9 +142,9 @@ that issue, or just want to be sure, you can use `-v <VENDOR>` to specify.
 Once you've gone through the pre-requirements, have your build host set up, and
 looked at the build script examples, you're ready to create an image yourself.
 
-After you run the `cronie.sh` script, bitbake gets called, first parsing all
-the recipes and making sure your `local.conf` and `bblayers.conf` looks good,
-before going to work "baking" your image!
+When you run `cronie.sh`, bitbake gets called, first parsing all
+the recipes and making sure your `local.conf` and `bblayers.conf` looks good.
+Next, bitbake gets to work "baking" your image!
 
 ![image of build start](assets/images/build_config.png)
 
@@ -168,9 +159,9 @@ this:
 
 ![completed image](assets/images/build_done.png)
 
-Assuming you are still in the build directory, you'll find the finished images
-and related items such as the onie-installer in
-`tmp-glibc/deploy/images/<VENDOR>-<MACHINE>/`
+From the build directory, you'll find the finished images and related items such
+as the onie-installer in `tmp-glibc/deploy/images/<VENDOR>-<MACHINE>/`
+TODO: fact check onie-installer still in use
 
 ### Build Process
 
