@@ -53,7 +53,12 @@ The kernel module is automatically loaded on boot and will create a device node
 
 ## Newly Added Features
 
-## containerd ad K3s
+mion ONIE images can be built without the complication of the multiconfig
+by using the timely `cronie.sh` build script; this is now the default
+approaching for building mion.
+
+### containerd ad K3s
+
 [Containers are implemented using containerd and K3s](mion-container-support.md)
 
 ## Ends
