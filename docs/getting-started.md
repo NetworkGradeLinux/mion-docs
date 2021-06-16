@@ -82,7 +82,9 @@ We added the cake.*
 
 ## Obtaining mion Sources
 
-You're almost ready. Obtain the *required* mion bitbake layers:
+You're almost ready! Now obtain the *required* mion bitbake layers. Use either
+the script `mion/contrib/clone_mion_repos.sh`, which clones all the
+main public mion repos with a single command, or manually as shown below.
 
 ```shell
 # To clone the submodules, `--recursive` is required
@@ -96,16 +98,12 @@ git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
 git clone https://github.com/NetworkGradeLinux/meta-mion-backports.git
 ```
 
-Alternatively, the script `mion/contrib/clone_mion_repos.sh` will clone all of
-the main public mion repos with a single command.
-
 `mion` provides the build script (cronie.sh) and configuration files in
 `build/conf/`. The `meta-mion` layer provides mion distro configuration, and
-`meta-mion-bsp` is were support and configuration is found.
+`meta-mion-bsp` is where support and configuration is found.
+[Resources](resources.md) provides a detailed listing of all active mion repos.
 
-> 
-
-## Basic Usage
+## Basic Usage of Build Environment
 
 To begin, set up the build environment using the OpenEmbedded init script:
 
@@ -163,7 +161,6 @@ this:
 
 From the build directory, you'll find the finished images and related items such
 as the onie-installer in `tmp-glibc/deploy/images/<VENDOR>-<MACHINE>/`
-TODO: fact check onie-installer still in use
 
 ### Build Process
 
@@ -180,10 +177,8 @@ down as follows:
 You're finally done with this guide? Now it's time for
 [Installing mion](installing_mion.md)!
 
-If you've built the qemu image, from the build directory, run:
+If you've built the qemu image, from the build directory,
+`runqemu tmp-glibc/deploy/images/qemux86-64/`
 
 > runqemu may require setting up a tap interface. See `meta-mion-qemu/README`
 for more information.
-
-`runqemu tmp-glibc/deploy/images/qemux86-64/`
-

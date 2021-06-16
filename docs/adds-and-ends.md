@@ -1,14 +1,19 @@
 # Adds and Ends
 
-mion has a few **additional** features that are use-case specific, but don't
-warrant their own page. Then there are features that are experimental or not
-fully tested, or were newly added right before a release, and may be of
-interest. Lastly, features or packages that will be phased out of mion.
+mion has **additional** features that are:
+
+* use-case specific or niche, and don't need their own page
+* very new
+* experimental or not fully tested
+* to be phased out of mion.
+
+You'll find the above and more, here at *Adds and Ends*.
 
 > This is also a good time to remind you to check that you're reading the
 correct documentation version.
 
-Read the [release notes](release_notes/2021-03.md) for full list of changes.
+While there's some overlap, you should read the
+[release notes](release_notes/2021-06.md) for full list of changes.
 
 ## Additional Features
 
@@ -30,7 +35,7 @@ This will include tools for building and debugging on the target.
 
 As of mion 2021.03, qemux86-64 mion image with ONLPv1 support can be built.
 The primary purpose of this qemu image is to support testing, such as
-[p-tests and OpenEmbedded runtime tests](https://github.com/NetworkGradeLinux/mion-docs/wiki/Test-plan).
+[p-tests and OpenEmbedded runtime tests](https://github.com/NetworkGradeLinux/mion-docs/wiki/Automated-testing).
 
 Outside of internal testing purposes, the qemu image can give you a quick look
 at mion without the need to install it on bare-metal.
@@ -53,6 +58,8 @@ The kernel module is automatically loaded on boot and will create a device node
 
 ## Newly Added Features
 
+### ONIE Only Image Creation
+
 mion ONIE images can be built without the complication of the multiconfig
 by using the timely `cronie.sh` build script; this is now the default
 approaching for building mion.
@@ -60,6 +67,11 @@ approaching for building mion.
 ### containerd ad K3s
 
 [Containers are implemented using containerd and K3s](mion-container-support.md)
+
+### Ptest Images
+
+OpenEmbedded provides ptests, which in short are tests that are included with a
+package and have been configured via a recipe to summarize the results.
 
 ## Ends
 

@@ -6,15 +6,23 @@
   information regarding the internal development of mion and work in progress
 * [Network Grade Linux](https://github.com/NetworkGradeLinux): Parent project of
   mion
+  
+### mion Repos
+
 * [mion](https://github.com/NetworkGradeLinux/mion): Base mion GitHub repository
 * [meta-mion](https://github.com/NetworkGradeLinux/meta-mion): GitHub repository
   for the base distro layer
-* [meta-mion-bsp](https://github.com/NetworkGradeLinux/meta-mion-bsp/)
+* [meta-mion-bsp](https://github.com/NetworkGradeLinux/meta-mion-bsp/):
   Board/machine configurations and support layers
-* [meta-mion-sde](https://github.com/NetworkGradeLinux/meta-mion-sde/)
+* [meta-mion-sde](https://github.com/NetworkGradeLinux/meta-mion-sde/):
   Recipes needed to enable switch ASIC functionality
-* [meta-mion-backports](https://github.com/NetworkGradeLinux/meta-mion-backports/)
-  Recipes backported from other Yocto project repos
+* [meta-mion-backports](https://github.com/NetworkGradeLinux/meta-mion-backports/):
+  Recipes backported from other Yocto project repos, such as K3s support
+* [meta-mion-stratum](https://github.com/NetworkGradeLinux/meta-mion-stratum):
+  [Stratum Support](https://github.com/NetworkGradeLinux/mion-docs/wiki/Stratum).
+  Currently dependent on `meta-mion-sde`.
+* [meta-mion-unsupported](https://github.com/NetworkGradeLinux/meta-mion-unsupported):
+  layers which are not currently supported, such as meta-mion-simplerunc
 
 ## Yocto Project and OpenEmbedded
 

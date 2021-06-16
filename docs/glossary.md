@@ -1,9 +1,9 @@
 # Glossary
 
-## Yocto Project and mion
+## Yocto Project, OpenEmbedded, and mion
 
 * **mion**: Mini Infrastucture Operating System for Networks
-* **Open Embedded**: [Build framework](https://www.openembedded.org/wiki/Main_Page)
+* **OpenEmbedded**: [Build framework](https://www.openembedded.org/wiki/Main_Page)
   used by the Yocto Project
 * **recipe**: a set of instructions related to the fetching, building, or
   installation of a program within the Yocto Project
