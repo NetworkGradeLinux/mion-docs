@@ -96,6 +96,8 @@ git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
 git clone https://github.com/NetworkGradeLinux/meta-mion-backports.git
 ```
 
+Alternatively, the script `mion/contrib/clone_mion_repos.sh` will clone all of
+the main public mion repos with a single command.
 
 `mion` provides the build script (cronie.sh) and configuration files in
 `build/conf/`. The `meta-mion` layer provides mion distro configuration, and
