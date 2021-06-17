@@ -16,7 +16,7 @@
     
     
       
-        <title>Image Types - mion docs</title>
+        <title>mion Container Support - mion docs</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-types-and-multiconfig" class="md-skip">
+        <a href="#mion-container-support" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Image Types
+              mion Container Support
             
           </span>
         </div>
@@ -287,12 +287,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Image Types
+          mion Container Support
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Image Types
+        mion Container Support
       </a>
       
         
@@ -309,15 +309,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#image-configurations" class="md-nav__link">
-    Image Configurations
+  <a href="#containerd" class="md-nav__link">
+    containerd
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiconfig" class="md-nav__link">
-    Multiconfig
+  <a href="#k3s-support" class="md-nav__link">
+    K3s Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#previous-container-support" class="md-nav__link">
+    Previous Container Support
   </a>
   
 </li>
@@ -326,6 +333,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stratum/" class="md-nav__link">
+        Stratum
+      </a>
     </li>
   
 
@@ -371,14 +393,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
-      <label class="md-nav__link" for="__nav_9">
+      <label class="md-nav__link" for="__nav_10">
         Release Notes
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Release Notes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Release Notes
         </label>
@@ -428,14 +450,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
       
-      <label class="md-nav__link" for="__nav_11">
+      <label class="md-nav__link" for="__nav_12">
         Community
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Community" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Community
         </label>
@@ -538,15 +560,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#image-configurations" class="md-nav__link">
-    Image Configurations
+  <a href="#containerd" class="md-nav__link">
+    containerd
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiconfig" class="md-nav__link">
-    Multiconfig
+  <a href="#k3s-support" class="md-nav__link">
+    K3s Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#previous-container-support" class="md-nav__link">
+    Previous Container Support
   </a>
   
 </li>
@@ -564,39 +593,51 @@
               
                 
                 
-                <h1 id="image-types-and-multiconfig">Image Types and Multiconfig</h1>
-<p>There are three main types of images in mion:</p>
+                <h1 id="mion-container-support">mion Container Support</h1>
+<p>From mion release 2021.06 onwards, srunc is not supported. Containers are now
+utilized with <a href="https://containerd.io/">containerd</a> and the lightweight
+Kubernetes distribution <a href="https://k3s.io/">K3s</a>.</p>
+<h2 id="containerd">containerd</h2>
+<p>In keeping things simple, only <a href="https://containerd.io/">containerd</a> (and its
+dependencies) are added to the default image.</p>
+<p>To work with containerd, check that the service has been started:</p>
+<pre><code class="language-shell">
+systemctl enable containerd
+systemctl start containerd
+
+</code></pre>
+<p>There are two main ways of interacting with containerd:</p>
 <ul>
-<li><strong>guest images</strong>: Provide container images for the host OS</li>
-<li><strong>host images</strong>: Small host image for running guests</li>
-<li><strong>core images</strong>: Provides a host image useful for bare image installs or ONIE
-  installers</li>
+<li>
+<p><a href="https://github.com/projectatomic/containerd/blob/master/docs/cli.md">containerd-ctr</a>;
+a command-line tool that provides access to the core functionality</p>
+</li>
+<li>
+<p>containerd
+  <a href="https://github.com/containerd/containerd/blob/master/README.md">API</a>;
+  this option may require installation of additional packages which are not
+  included on the default image</p>
+</li>
 </ul>
-<h2 id="image-configurations">Image Configurations</h2>
+<h2 id="k3s-support">K3s Support</h2>
+<p><a href="https://github.com/k3s-io/k3s/blob/master/README.md">K3s</a>
+is not available in the dunfell branch of meta-virtualisation; you must clone
+<a href="https://github.com/NetworkGradeLinux/meta-mion-backports">meta-mion-backports</a>
+to add support.</p>
 <blockquote>
-<p>where onlpv* can be "onlpv1" <em>or</em> "onlpv2"</p>
+<p>Although K3s is backported and supported in mion, it is still considered
+experimental and untested. You will likely want to avoid using it in a
+production environment.</p>
 </blockquote>
-<ul>
-<li><strong>mion-guest-onlpv*</strong>: guest with ONLP installed</li>
-<li><strong>mion-host</strong>: Host image for running guests</li>
-<li><strong>mion-image-onlpv*</strong>: core image with ONLP installed</li>
-<li><strong>mion-onie-image-onlpv*</strong>: host with ONLP ONIE</li>
-</ul>
+<h2 id="previous-container-support">Previous Container Support</h2>
+<p>The previous solution for custom containers, <code>srunc</code>, is no longer supported in
+mion and has been move to
+<a href="https://github.com/NetworkGradeLinux/meta-mion-unsupported">meta-mion-unsupported</a>.</p>
 <blockquote>
-<p>Not all platforms support all image configurations</p>
+<p>Previously, <code>multiconfig</code> and <code>mc_build.sh</code> were used along to build mion
+images with container support. Though no longer in use, they are being retained
+for potential repurposing in future releases.</p>
 </blockquote>
-<h2 id="multiconfig">Multiconfig</h2>
-<p>mion utilizes multiconfig to provide system profiles for guest and host
-(including non-container supporting images). This enables end users to use one
-image for multiple use cases, for example, using mion-image-onlpv1 as both a
-QEMU image or an ONIE installer image.</p>
-<p>The following self-explanatory config files can be found in
-<code>build/conf/multiconfig</code>:</p>
-<ul>
-<li><strong>guest.conf</strong></li>
-<li><strong>host.conf</strong></li>
-<li><strong>host-onie.conf</strong></li>
-</ul>
                 
               
               
@@ -629,13 +670,13 @@ QEMU image or an ONIE installer image.</p>
         </a>
       
       
-        <a href="../glossary/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../stratum/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Glossary
+              Stratum
             </div>
           </div>
           <div class="md-footer__button md-icon">
