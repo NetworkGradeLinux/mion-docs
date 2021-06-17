@@ -293,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stratum/" class="md-nav__link">
+      <a href="../stratum.md" class="md-nav__link">
         Stratum
       </a>
     </li>
@@ -363,6 +363,33 @@
   <a href="#sde" class="md-nav__link">
     SDE
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stratum-support-in-mion" class="md-nav__link">
+    Stratum Support in mion
+  </a>
+  
+    <nav class="md-nav" aria-label="Stratum Support in mion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-stratum" class="md-nav__link">
+    Installing Stratum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-stratum" class="md-nav__link">
+    Starting Stratum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -638,6 +665,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#stratum-support-in-mion" class="md-nav__link">
+    Stratum Support in mion
+  </a>
+  
+    <nav class="md-nav" aria-label="Stratum Support in mion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-stratum" class="md-nav__link">
+    Installing Stratum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-stratum" class="md-nav__link">
+    Starting Stratum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#development-image" class="md-nav__link">
     Development Image
   </a>
@@ -787,6 +841,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#stratum-support-in-mion" class="md-nav__link">
+    Stratum Support in mion
+  </a>
+  
+    <nav class="md-nav" aria-label="Stratum Support in mion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-stratum" class="md-nav__link">
+    Installing Stratum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-stratum" class="md-nav__link">
+    Starting Stratum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#development-image" class="md-nav__link">
     Development Image
   </a>
@@ -908,6 +989,38 @@ correct documentation version.</p>
 layer, the necessary components for the Barefoot SDE are now available, enabling
 <a href="../supported-switches/">Tofino asics</a>.</p>
 <p>For more information and on how to use it, checkout out the <a href="https://github.com/NetworkGradeLinux/meta-mion-sde/tree/dunfell/meta-mion-barefoot">README</a></p>
+<h3 id="stratum-support-in-mion">Stratum Support in mion</h3>
+<blockquote>
+<p>IMPORTANT NOTE: Stratum support is still considered experimental and largely
+untested.</p>
+</blockquote>
+<p>The <a href="https://opennetworking.org/stratum/">Stratum</a> project provides an
+open-source SDN stack, with source code available via
+<a href="https://opennetworking.org/stratum/">Stratum GitHub</a>.</p>
+<p>The <a href="https://github.com/NetworkGradeLinux/meta-mion-stratum">meta-mion-stratum</a>
+layer provides the recipes.</p>
+<blockquote>
+<p>Note: the stratum recipe simply downloads the .deb archive provided by the
+Stratum project and extracts the contents (binaries, libraries and scripts) to
+the correct location on the mion filesystem.</p>
+</blockquote>
+<h4 id="installing-stratum">Installing Stratum</h4>
+<ol>
+<li>Stratum currently depends on the Barefoot SDE - <a href="Barefoot-SDE">Installing Barefoot SDE</a></li>
+<li>Clone the <code>meta-mion-stratum</code> layer to your mion directory
+<code>git clone git@github.com:NetworkGradeLinux/meta-mion-stratum.git</code></li>
+<li>Add the <code>meta-mion-stratum</code> layer to <code>build/conf/bblayers.conf</code></li>
+<li>Add the following to the bottom of <code>build/conf/local.conf</code>:
+   <code>IMAGE_INSTALL += " stratum"</code></li>
+<li>Build and install an image as normal.</li>
+</ol>
+<h4 id="starting-stratum">Starting Stratum</h4>
+<ul>
+<li><a href="https://github.com/stratum/stratum/blob/main/README.md">Stratum documentation</a></li>
+</ul>
+<p>The Stratum start-up script is <code>/usr/bin/start-stratum.sh</code> which can also be
+viewed in the
+<a href="https://github.com/stratum/stratum/blob/main/stratum/hal/bin/barefoot/deb/start-stratum.sh">Stratum repo</a>.</p>
 <h3 id="development-image">Development Image</h3>
 <p>Development images can now be built with <code>packagegroup-dev-mion</code>.
 This will include tools for building and debugging on the target.</p>
