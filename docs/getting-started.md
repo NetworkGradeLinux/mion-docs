@@ -175,7 +175,7 @@ down as follows:
 * *Deploying mion via ONIE*: **5 minutes per switch**
 
 You're finally done with this guide? Now it's time for
-[Installing mion](installing_mion.md)!
+[Installing mion](installing-mion.md)!
 
 If you've built the qemu image, from the build directory,
 `runqemu tmp-glibc/deploy/images/qemux86-64/`

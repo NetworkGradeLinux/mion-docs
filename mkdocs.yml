@@ -9,11 +9,10 @@ remote_name: dunfell
 nav:
   - Home: index.md
   - Getting Started Guide: getting-started.md
-  - Installing mion: installing_mion.md
+  - Installing mion: installing-mion.md
   - Supported Switches: supported-switches.md
   - Resources: resources.md
   - mion Container Support: mion-container-support.md
-  - Stratum: stratum.md
   - Glossary: glossary.md
   - Adds and Ends: adds-and-ends.md
   - Release Notes: 
