@@ -1,21 +1,10 @@
 # Resources
 
-## Open Source Software
-
-## Switch/Network
-
-### Operating Systems 
-
-* [Stratum](https://opennetworking.org/stratum/)
-* ONIE[]
-
-### Tools
-TODO: interfaces, libs, etc
 ## mion
 
-* [mion developer wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki):
+* [mion developer wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki);
   information regarding the internal development of mion and work in progress
-* [Network Grade Linux](https://github.com/NetworkGradeLinux): Parent project of
+* [Network Grade Linux](https://github.com/NetworkGradeLinux); Parent project of
   mion
 
 ### mion Repos
