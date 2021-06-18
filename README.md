@@ -12,9 +12,13 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 * [Accessibility](docs/ACCESSIBILITY.md)
 
+* [Adds and Ends](docs/adds-and-ends.md)
+
 * [Code of Conduct](docs/community/code-of-conduct.md)
 
 * [CoC Interpretation](docs/community/Coc-interpretation.md)
+
+* [Community](docs/community/Community.md)
 
 * [Contributing](CONTRIBUTING.md)
 
@@ -22,11 +26,15 @@ If you want to contribute to mion-docs, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 * [Glossary](docs/glossary.md)
 
-* [Image Types](docs/imagetypes.md)
+* [Index (home)](docs/index.md)
 
-* [Installing mion](docs/installing_mion.md)
+* [Installing mion](docs/installing-mion.md)
+
+* [Container Support](docs/mion-container-support.md)
 
 * [Resources](docs/resources.md)
+
+* [Supported Switches](docs/supported-switches.md)
 
 ## Structure/Directory layout
 
