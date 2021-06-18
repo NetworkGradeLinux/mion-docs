@@ -26,7 +26,7 @@ know that they will be respected and welcomed before they joined and not only
 after they have done so.
 
 In line with our standards is our
-[style-guide](https://github.com/NetworkGradeLinux/mion-docs/wiki/Style-guide),
+[style-guide](https://github.com/NetworkGradeLinux/mion-docs/wiki/Style-and-Communication-Guide),
 which we expect contributors to be familiar with, and to follow our guidelines
 on Inclusivity and Supporting Diversity.
 
@@ -58,7 +58,7 @@ mannor which represents our values.
 ## Scope
 
 The scope extends to accounts which submit patches and pull requests, such as on
-Github.
+GitHub.
 
 ## Enforcement
 
