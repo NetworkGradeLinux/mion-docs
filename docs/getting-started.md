@@ -133,7 +133,7 @@ that issue, or just want to be sure, you can use `-v <VENDOR>` to specify.
 ../cronie.sh -m stordis-bf2556x-1t mion-onie-image-onlpv1
 
 # Builds the qemu image with ONLPV1 with p-test support
-../cronie.sh -v qemu -m qemux86-64 mion-onie-image-onlpv1-ptest
+../cronie.sh -v qemu -m qemux86-64 mion-image-onlpv1-ptest
 
 ```
 
