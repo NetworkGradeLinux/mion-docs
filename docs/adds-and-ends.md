@@ -38,7 +38,7 @@ open-source SDN stack, with source code available via
 The [meta-mion-stratum](https://github.com/NetworkGradeLinux/meta-mion-stratum)
 layer provides the recipes.
 
-> Note: the stratum recipe simply downloads the .deb archive provided by the
+> Note: the Stratum recipe simply downloads the .deb archive provided by the
 Stratum project and extracts the contents (binaries, libraries and scripts) to
 the correct location on the mion filesystem.
 

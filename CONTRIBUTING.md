@@ -167,10 +167,10 @@ In a terminal:
 git add path/filename
 
 # commit time!
-git commit --signoff
+
 ```
 
-> This will start the default editor defined in your git config. To change, run
+> This will start the default editor defined in your git config. To change, run:
 `git config --global core.editor name_of_editor`
 
 If you need help with the commit message, refer back to
@@ -182,7 +182,7 @@ Almost done! Now it's time to push your branch onto GitHub:
 
 Lastly, go to <https://github.com/NetworkGradeLinux/mion-docs> and submit a pull
 request for your branch to be merged with dunfell. We will let you know if
-there're any issues and what corrections need to be made. After your pull
+there are any issues and what corrections need to be made. After your pull
 request is merged, delete your branch from the remote repo. (Though you can keep
 it on your computer if you want to)
 
