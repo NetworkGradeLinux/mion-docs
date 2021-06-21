@@ -107,6 +107,19 @@ approaching for building mion.
 OpenEmbedded provides ptests, which in short are tests that are included with a
 package and have been configured via a recipe to summarize the results.
 
+### Dent
+
+Initial Support for
+[Dent](https://github.com/NetworkGradeLinux/mion-docs/wiki/mion-Dent-support)
+has been added. The mion dev wiki has
+[up to date information](https://github.com/NetworkGradeLinux/mion-docs/wiki/mion-Dent-support)
+on this subject.
+
+### Newly added BSP layers
+
+Support for [the Delta-TN48M](https://github.com/NetworkGradeLinux/meta-mion-bsp/tree/dunfell/meta-mion-delta)
+has been added in meta-mion-bsp.
+
 ## Ends
 
 ### meta-mion-srunc
