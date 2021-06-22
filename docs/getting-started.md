@@ -119,7 +119,7 @@ arguments displays basic usage. **In general:**
 ../cronie.sh -m <machine> <image>
 ```
 
-**The <image> argument must be provided last**
+**NOTE: The \<image\> argument must be provided last**
 
 To do a "dry run" without running a build, add `-e` which emits what would have
 run if you ran this from bitbake.
