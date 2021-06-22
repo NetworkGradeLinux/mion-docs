@@ -29,14 +29,15 @@ For more information and on how to use it, checkout out the [README](https://git
 ### Stratum Support in mion
 
 > IMPORTANT NOTE: Stratum support is still considered experimental and largely
-untested.
+untested. See the [wiki](https://github.com/NetworkGradeLinux/mion-docs/wiki/Stratum)
+for the most up-to-date information.
 
 The [Stratum](https://opennetworking.org/stratum/) project provides an
 open-source SDN stack, with source code available via
 [Stratum GitHub](https://opennetworking.org/stratum/).
 
-The [meta-mion-stratum](https://github.com/NetworkGradeLinux/meta-mion-stratum)
-layer provides the recipes.
+mion Stratum recipes can be found in
+[meta-mion](https://github.com/NetworkGradeLinux/meta-mion).
 
 > Note: the Stratum recipe simply downloads the .deb archive provided by the
 Stratum project and extracts the contents (binaries, libraries and scripts) to
@@ -44,13 +45,10 @@ the correct location on the mion filesystem.
 
 #### Installing Stratum
 
-1. Stratum currently depends on the Barefoot SDE - [Installing Barefoot SDE](Barefoot-SDE)
-2. Clone the `meta-mion-stratum` layer to your mion directory
-`git clone git@github.com:NetworkGradeLinux/meta-mion-stratum.git`
-3. Add the `meta-mion-stratum` layer to `build/conf/bblayers.conf`
-4. Add the following to the bottom of `build/conf/local.conf`:
+1. Stratum currently depends on the Barefoot SDE: [Installing Barefoot SDE](https://github.com/NetworkGradeLinux/mion-docs/wiki/Barefoot-SDE)
+2. Add the following to the bottom of `build/conf/local.conf`:
    `IMAGE_INSTALL += " stratum"`
-5. Build and install an image as normal.
+3. Build and install an image as normal.
 
 #### Starting Stratum
 
@@ -98,7 +96,7 @@ mion ONIE images can be built without the complication of the multiconfig
 by using the timely `cronie.sh` build script; this is now the default
 approaching for building mion.
 
-### containerd ad K3s
+### containerd and K3s
 
 [Containers are implemented using containerd and K3s](mion-container-support.md)
 
@@ -111,7 +109,8 @@ package and have been configured via a recipe to summarize the results.
 
 Initial Support for
 [Dent](https://github.com/NetworkGradeLinux/mion-docs/wiki/mion-Dent-support)
-has been added. The mion dev wiki has
+has been added; currently only the delta-TN48M switch has Dent support.
+The mion dev wiki has
 [up to date information](https://github.com/NetworkGradeLinux/mion-docs/wiki/mion-Dent-support)
 on this subject.
 
