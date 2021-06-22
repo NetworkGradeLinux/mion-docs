@@ -11,16 +11,13 @@
 
 * [mion](https://github.com/NetworkGradeLinux/mion); Base mion GitHub repository
 * [meta-mion](https://github.com/NetworkGradeLinux/meta-mion); GitHub repository
-  for the base distro layer
+  for the base distro layer and image types.
 * [meta-mion-bsp](https://github.com/NetworkGradeLinux/meta-mion-bsp/);
   Board/machine configurations and support layers
 * [meta-mion-sde](https://github.com/NetworkGradeLinux/meta-mion-sde/);
   Recipes needed to enable switch ASIC functionality
 * [meta-mion-backports](https://github.com/NetworkGradeLinux/meta-mion-backports/);
   Recipes backported from other Yocto project repos, such as K3s support
-* [meta-mion-stratum](https://github.com/NetworkGradeLinux/meta-mion-stratum);
-  [Stratum Support](https://github.com/NetworkGradeLinux/mion-docs/wiki/Stratum)
-
 * [meta-mion-unsupported](https://github.com/NetworkGradeLinux/meta-mion-unsupported);
   layers which are not currently supported, such as `meta-mion-simplerunc`
 
