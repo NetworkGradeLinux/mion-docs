@@ -427,8 +427,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerd-ad-k3s" class="md-nav__link">
-    containerd ad K3s
+  <a href="#containerd-and-k3s" class="md-nav__link">
+    containerd and K3s
   </a>
   
 </li>
@@ -739,8 +739,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerd-ad-k3s" class="md-nav__link">
-    containerd ad K3s
+  <a href="#containerd-and-k3s" class="md-nav__link">
+    containerd and K3s
   </a>
   
 </li>
@@ -929,8 +929,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#containerd-ad-k3s" class="md-nav__link">
-    containerd ad K3s
+  <a href="#containerd-and-k3s" class="md-nav__link">
+    containerd and K3s
   </a>
   
 </li>
@@ -1019,13 +1019,14 @@ layer, the necessary components for the Barefoot SDE are now available, enabling
 <h3 id="stratum-support-in-mion">Stratum Support in mion</h3>
 <blockquote>
 <p>IMPORTANT NOTE: Stratum support is still considered experimental and largely
-untested.</p>
+untested. See the <a href="https://github.com/NetworkGradeLinux/mion-docs/wiki/Stratum">wiki</a>
+for the most up-to-date information.</p>
 </blockquote>
 <p>The <a href="https://opennetworking.org/stratum/">Stratum</a> project provides an
 open-source SDN stack, with source code available via
 <a href="https://opennetworking.org/stratum/">Stratum GitHub</a>.</p>
-<p>The <a href="https://github.com/NetworkGradeLinux/meta-mion-stratum">meta-mion-stratum</a>
-layer provides the recipes.</p>
+<p>mion Stratum recipes can be found in
+<a href="https://github.com/NetworkGradeLinux/meta-mion">meta-mion</a>.</p>
 <blockquote>
 <p>Note: the Stratum recipe simply downloads the .deb archive provided by the
 Stratum project and extracts the contents (binaries, libraries and scripts) to
@@ -1033,10 +1034,7 @@ the correct location on the mion filesystem.</p>
 </blockquote>
 <h4 id="installing-stratum">Installing Stratum</h4>
 <ol>
-<li>Stratum currently depends on the Barefoot SDE - <a href="Barefoot-SDE">Installing Barefoot SDE</a></li>
-<li>Clone the <code>meta-mion-stratum</code> layer to your mion directory
-<code>git clone git@github.com:NetworkGradeLinux/meta-mion-stratum.git</code></li>
-<li>Add the <code>meta-mion-stratum</code> layer to <code>build/conf/bblayers.conf</code></li>
+<li>Stratum currently depends on the Barefoot SDE: <a href="https://github.com/NetworkGradeLinux/mion-docs/wiki/Barefoot-SDE">Installing Barefoot SDE</a></li>
 <li>Add the following to the bottom of <code>build/conf/local.conf</code>:
    <code>IMAGE_INSTALL += " stratum"</code></li>
 <li>Build and install an image as normal.</li>
@@ -1073,7 +1071,7 @@ include both the required kernel drivers, and a number of user-space TPM2 tools.
 <p>mion ONIE images can be built without the complication of the multiconfig
 by using the timely <code>cronie.sh</code> build script; this is now the default
 approaching for building mion.</p>
-<h3 id="containerd-ad-k3s">containerd ad K3s</h3>
+<h3 id="containerd-and-k3s">containerd and K3s</h3>
 <p><a href="../mion-container-support/">Containers are implemented using containerd and K3s</a></p>
 <h3 id="ptest-images">Ptest Images</h3>
 <p>OpenEmbedded provides ptests, which in short are tests that are included with a
@@ -1081,7 +1079,8 @@ package and have been configured via a recipe to summarize the results.</p>
 <h3 id="dent">Dent</h3>
 <p>Initial Support for
 <a href="https://github.com/NetworkGradeLinux/mion-docs/wiki/mion-Dent-support">Dent</a>
-has been added. The mion dev wiki has
+has been added; currently only the delta-TN48M switch has Dent support.
+The mion dev wiki has
 <a href="https://github.com/NetworkGradeLinux/mion-docs/wiki/mion-Dent-support">up to date information</a>
 on this subject.</p>
 <h3 id="newly-added-bsp-layers">Newly added BSP layers</h3>
