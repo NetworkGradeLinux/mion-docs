@@ -10,4 +10,5 @@ we have a [mion porting guide](https://github.com/NetworkGradeLinux/meta-mion-bs
 | Edgecore      | ASGvOLT-64     | x86_64 | Broadcom Qumran-AX | 2U 64xGPON + 2x100GB | 2020.12       |
 | Edgecore      | Wedge100BF-32X | x86_64 | BF Tofino 1        | 1U 32x100Gb          | 2020.12       |
 | Edgecore      | Wedge100BF-65X | x86_64 | BF Tofino 1        | 2U 65x100Gb          | 2020.12       |
+| Delta         | tn48m          | arm64  | --                 | 1U 32x10Gb           | 2021.06       |
 | QEMU          | qemux86-64     | x86_64 | --                 | --                   | 2021.03       |
