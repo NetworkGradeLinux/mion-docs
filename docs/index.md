@@ -7,9 +7,8 @@ security and supportability at it's core.
 
 [View it on GitHub](https://github.com/NetworkGradeLinux/mion-docs)
 
-> Welcome! This documentation is for **the dev version**, which will become the
-2021.06 release. For other versions check the version selector in the upper
-left menu.
+> Welcome! This documentation is for dunfell-2021.06 "Dernish". For other
+versions check the version selector in the upper left menu.
 
 mion provides a network operating system(NOS) focusing on enterprise level
 managed switches with support for the [Open Network Install Environment(ONIE)](http://onie.org/)
