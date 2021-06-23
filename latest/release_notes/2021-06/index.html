@@ -389,30 +389,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#release-notes" class="md-nav__link">
+    Release Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#main-features-and-improvements" class="md-nav__link">
     Main features and improvements
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#notable-bug-fixes" class="md-nav__link">
     Notable bug fixes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#errata-of-known-issues" class="md-nav__link">
     Errata of known issues
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#breaking-changes" class="md-nav__link">
     Breaking changes
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -573,30 +586,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#release-notes" class="md-nav__link">
+    Release Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#main-features-and-improvements" class="md-nav__link">
     Main features and improvements
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#notable-bug-fixes" class="md-nav__link">
     Notable bug fixes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#errata-of-known-issues" class="md-nav__link">
     Errata of known issues
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#breaking-changes" class="md-nav__link">
     Breaking changes
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -621,11 +647,12 @@
                 
                 
                 <h1 id="mion-dunfell-202106-dernish">mion dunfell-2021.06 "Dernish"</h1>
+<h2 id="release-notes">Release Notes</h2>
 <p>The Network Grade Linux project is very proud to present the fourth release of
-mion, code-named "Dernish". This version contains support for the Barefoot SDE
-version 9.4.0, initial support for the Stratum and Dent projects, package
-management and feeds as well as a new container strategy.</p>
-<h4 id="main-features-and-improvements">Main features and improvements</h4>
+mion, code-named "Dernish". Notable features include support for the Barefoot
+SDE version 9.4.0, initial support for the Stratum and Dent projects, package
+management and feeds as well as a new container strategy using containerd.</p>
+<h3 id="main-features-and-improvements">Main features and improvements</h3>
 <ul>
 <li>New BSP: Delta TN48M - backported 5.10 kernel and switchdev support</li>
 <li>Barefoot SDE version 9.4.0</li>
@@ -638,40 +665,180 @@ management and feeds as well as a new container strategy.</p>
 <li>K3s backported to dunfell in meta-mion-backports</li>
 <li>Numerous bug fixes and minor improvements</li>
 </ul>
-<h4 id="notable-bug-fixes">Notable bug fixes</h4>
+<h3 id="notable-bug-fixes">Notable bug fixes</h3>
 <ul>
 <li>Boot issue on APS BF6064 (meta-mion-bsp#47)</li>
 <li>bf_switchd Takes Longer to launch on mion (meta-mion-sde#13)</li>
 </ul>
-<h4 id="errata-of-known-issues">Errata of known issues</h4>
+<h3 id="errata-of-known-issues">Errata of known issues</h3>
 <ul>
-<li>host contamination in ONLPv1 (mion#139)</li>
+<li>Host contamination in ONLPv1 (mion#139)</li>
 <li>GRUB menu install failure with old version of ONIE (meta-mion#63)</li>
 <li>NFSD fails to start due to missing kernel module (meta-mion#87)</li>
-<li>Stratum /opt/usr/lib and Library Path (meta-mion#120)</li>
 <li>Kernel panic on shutdown with irq_debug.ko (meta-mion-bsp#27)</li>
-<li>Intermittent build failures on BF6064X-T (meta-mion-bsp#30)</li>
 <li>Relink error libm when starting onlpd on BF6064X-T (meta-mion-bsp#58)</li>
+<li>SMBUS Get Fail (meta-mion-bsp#70)</li>
 <li>Cannot Access BfRt Python CLI Through bfshell (meta-mion-sde#12)</li>
 <li>Issue with port state on Barefoot SDE with BF2556X-1T (meta-mion-sde#18)</li>
-<li>bf_python is an incomplete build/install and fails on import __struct
-  (meta-mion-sde#19)</li>
 <li>Possible i2c Enumeration Race on BF2556X-1T (meta-mion-sde#20)</li>
 <li>Error Starting SDE - Hugepages (meta-mion-sde#29)</li>
 <li><a href="https://docs.mion.io">https://docs.mion.io</a> fails multiple accessibility checks (mion-docs#183)</li>
-<li>Ptest failures for diffutils, glib, and acl (mion-testing#6)</li>
 </ul>
-<h4 id="breaking-changes">Breaking changes</h4>
+<h3 id="breaking-changes">Breaking changes</h3>
 <ul>
 <li>meta-mion has been moved to the top of its repo and is no longer shared with
-  other layers</li>
+other layers</li>
 <li>meta-mion-backports layer is required by default</li>
-<li><code>mc_build.sh</code> has been deprecated in favor of a simpler build script --<code>cronie.sh</code></li>
+<li>mc_build.sh has been deprecated in favor of a simpler build script - cronie.sh</li>
 </ul>
 <h2 id="git-log">Git Log</h2>
-<pre><code class="language-shell">
-TODO
+<pre><code>
+*** mion ***
 
+- 445d518 Remove stratum repo from update script
+- 2f0facf Note build-script argument order in README.md
+- 04acfad [2021-23] Update submodules
+- 30c4ce8 repo_dispatch.yml: Fix host name
+- 3c1e0a5 Add contrib/ dir for community scripts
+- b19fa3d README.md: Update README to use new build script
+- 11480cc local.conf: Set default package feed URI
+- 62f6eb9 Add ptest requirement to local.conf
+- ca4954f Update repo dispatch
+- 1c114fd [2021-21] Update submodules
+- 662dc19 cronie.sh: fix permissions +x
+- d19781a cronie.sh: simple ONIE-only build script
+- 5ab450c bblayers.conf: add meta-mion-backports
+- 11fed5d onie-only-build.sh: Add a simple build script.
+- 7c9ce91 bblayers.conf: Remove meta-simplerunc.
+- 430c4b5 [2021-20] Update Submodules.
+- e60dc00 [2021-19] Update Submodules.
+- 78b60b3 [2021-17] Update submodules
+- 78e5994 Remove mender from README.md
+- 58ca131 Remove meta-mender submodule and mender configs
+- 53e860a Add pull request template
+
+*** meta-mion ***
+
+- fc6372a mion.conf: Bumping to Dernish release
+- 2243436 Add Stratum recipe and config
+- cfbe8db mion-image-core.inc: Add smarttools to default image
+- 7d799d9 dent_1.0.bb: Add ifupdown2 as a DEPENDS
+- ec156ab ifupdown2: Needed for DENT
+- 291c6c2 mion-onie-image.inc: Require kernel to be deployed
+- ac98423 mion-onie-image.inc: Ensure no wic image and correct no do_unpack.
+- a7ea5b6 layer.conf: change bbpriority
+- 101a4c7 mion-onie-image.inc: Fix bash failures/set no sstate
+- 51595b9 mion.conf: append IMAGE_FSTYPES
+- 66c8694 mion-onie-image.inc: Don't do this as IMAGE_POSTPROCESS
+- 1a0b911 Revert &quot;Allow additional image fstypes&quot;
+- ec89dc9 Allow additional image fstypes
+- aded7f1 mion.conf: Split distro version into vars
+- 4958e2b Update repo dispatch
+- f3561c0 mion-image-core.inc: Add package-management
+- 2cd9305 Update runner for repo_dispatch
+- 8a5501c Initial DENT: Support DENT
+- a7c543e mion.conf: Add ability to build onie images without mc
+- ede7018 mion-image-core.inc: Add containerd and runc to default
+- e9dec95 meta-mion: Restructure of meta-mion
+- 0286d7b meta-mion-simplerunc: Moved to meta-mion-unsupported
+- a52f83f recipes-core/packagegroups: move packagegroups-*
+- 7c45564 os-release.bbappend: Remove MACHINE
+- 9ed6703 onlpdump.service: Reduce timeout on onlpd shutdown
+- 48f91f2 Add p-test image type
+- 03591c3 Add aliases script to /etc/profile.d/
+- 2bd258b Add pull request template
+- aa69465 mion-image-core.inc: move dmidecode back from dev
+- 5f9fbfa mion.conf: Switch to +snapshot DISTRO_VERSION
+
+*** meta-mion-backports ***
+
+- 2ecd0c5 Apply styleguide rules to README.md
+- bb35719 Update repo dispatch
+- e79b7e2 linux-yocto_5.10.bb: Backport from hardknott of 5.10 kernel
+- b7989a4 Add repo dispatch and fix README file extension
+- 74c4338 Add k3s and deps from meta-virtualisation
+
+*** meta-mion-bsp ***
+
+- 55d1d35 barefoot-bsp_9.4.0.bbappend: Wrong path for 2556 patch
+- 8e838e3 barefoot-bsp_9.4.0.bbappend: put in APSN specific extract
+- dc7b992 Update qemu bsp info
+- 42f569a barefoot-bsp_9.4.0.bbappend: appends before machine
+- c2fec45 Add host include patch bf6064x-t
+- b76feae barefoot-bsp_9.4.0: Add bbappend for 6064
+- 2d35d80 Remove redundant clock source set from init script
+- 5a7b59b delta-tn48m: Fix kernel and initramfs generation
+- 152f161 qemu-qemux86-64.conf: Append IMAGE_FSTYPES
+- 2f778c8 Fix BF6064X-T Platform Initialisation
+- a81d551 delta-tn48m.conf: Add additional kernel variables
+- 39a70e4 qemu-qemux86-64.conf: Add ext4 image type.
+- 7f6ee4d Update repo dispatch
+- b3be795 0005-fsl-ls1043a-rdb-sdk.patch: Readd patch
+- f646a08 linux-yocto_5.10.bbappend: Remove unused patches
+- 1f490c9 meta-mion-delta: initial support for the tn48m
+- e482692 Add pull request template
+
+*** meta-mion-sde ***
+
+- 0ade065 barefoot-sde_9.4.0.bb: Remove APSN specific extract
+- 22c5239 barefoot-bsp: Add SDE_INSTALL to the envvar
+- deffc41 barefoot-bsp: Remove platform specific EXTRA_OECONF and patches
+- 4985fd4 Fix incorrect patch on bf-syslib log patch
+- 9a20d6a bf_drivers_9.4.0.bb: Add var/log to FILES_${PN)
+- 60fd7d8 bf-drivers_9.4.0: symlink and log fixes
+- 17550a1 bf-drivers: Remove unnecessary patch
+- ae43c79 Update repo dispatch
+- a21cdca boost/bjam: Add missing patches
+- 9c1e78f boost_1.67: Readd patches
+- bd12263 boost: cleanup patches
+- d6015fe boost: upgrade to 1.67
+- 7fae262 README: Add intial README
+- 6090242 meta-mion-barefoot: bump SDE to 9.4.0
+- 50ea611 Add repo dispatch to trigger builds
+- fc2794a Fix typo in pull request template
+- 4b09c9b Add pull request template
+
+*** mion-docs ***
+
+- db9c55f update link and nav
+- 05c0ead Add 2021.06 release notes
+- 7f154d8 Update Stratum and Dent information
+- d719c01 Adding Tn48m
+- 3cb9f8c Fix markdown syntax issue in getting started guide
+- ac5ef1d Add note on build script argument order
+- f0a0ed9 Do final check for adds-and-ends
+- 5a6bd4a Remove ONIE from qemu example
+- cabcaf2 Remove example of building ptest image
+- 11e41ee Apply style-guide rules to mion-docs
+- 5beb3db Remove partial and empty topics in resources
+- 2ace8b6 Check all links in mion-docs for correctness
+- 8656eaa Fix qemu build command in gsg
+- d68c9bb Move Stratum page info to adds-and-ends.md
+- ba95415 Document new features for 2021.06
+- c111502 Add reference to clone script
+- 4031f94 Add onie only build info to adds-and-ends.md
+- 3168a9a Add onie only build info to getting started guide
+- cf1734f Clean-up changes to adds-and-ends.md
+- 7e90eea Document Current Container Story
+- 915b040 getting-started.md: Update build script
+- e0474bd resources.md: Add missing repos
+- 62641cb Repurpopse imagetypes.md to outline container story
+- 26f3b1d Document meta-mion restructure
+- b9a63ec Remove mender from documentation
+- a0fa84b Fix typo in pull request template
+- 3a258e2 Merge pull request #193 from NetworkGradeLinux/johntoomey/github_checklist
+- b64147e Add pull request template
+- 8d766c5 Merge pull request #191 from NetworkGradeLinux/kprosise/2021.06-dev
+- 5958e01 Create dev version for 2021.06
+- f1453b8 Fix release year (#188)
+
+*** mion-testing ***
+
+- cf36192 Upload 2021.06 ptest results
+- dc39948 Add pull request template
+- a62435b Merge pull request #2 from NetworkGradeLinux/kprosise/Create-dir-layout
+- 8fa3713 Add directory placeholders and update
+- f59fb02 Create testing resource repository
 </code></pre>
                 
               
