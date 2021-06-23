@@ -1,0 +1,963 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Network Grade Linux mion">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Getting Started Guide - mion docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../css/version-select.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="mion docs" class="md-header__button md-logo" aria-label="mion docs">
+      
+  <img src="../assets/images/mion-colour-small.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mion docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/NetworkGradeLinux/mion/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="mion docs" class="md-nav__button md-logo" aria-label="mion docs">
+      
+  <img src="../assets/images/mion-colour-small.png" alt="logo">
+
+    </a>
+    mion docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/NetworkGradeLinux/mion/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Getting Started Guide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requirements" class="md-nav__link">
+    Pre-Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-host" class="md-nav__link">
+    Build Host
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Host">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1604-1804-and-debian-gnulinux-8x-10x" class="md-nav__link">
+    Ubuntu (16.04 -18.04) and Debian GNU/Linux (8.x-10.x)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora-28-32" class="md-nav__link">
+    Fedora (28-32)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centos7x" class="md-nav__link">
+    CentOS(7.x)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opensuse-leap-151" class="md-nav__link">
+    OpenSUSE Leap (15.1)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-mion-sources" class="md-nav__link">
+    Obtaining mion Sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage-of-build-environment" class="md-nav__link">
+    Basic Usage of Build Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-script-examples" class="md-nav__link">
+    Build Script Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-creation" class="md-nav__link">
+    Image Creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-process" class="md-nav__link">
+    Build Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing-mion/" class="md-nav__link">
+        Installing mion
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supported-switches/" class="md-nav__link">
+        Supported Switches
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mion-container-support/" class="md-nav__link">
+        mion Container Support
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adds-and-ends/" class="md-nav__link">
+        Adds and Ends
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Release Notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release Notes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/2021-03/" class="md-nav__link">
+        2021.03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/2021-06/" class="md-nav__link">
+        2021.06
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ACCESSIBILITY/" class="md-nav__link">
+        Accessibility
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        Community
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Community" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/Community/" class="md-nav__link">
+        About our Community
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/code-of-conduct/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/Coc-interpretation/" class="md-nav__link">
+        CoC Interpretation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adds-and-ends/" class="md-nav__link">
+        Adds and Ends
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledgements/" class="md-nav__link">
+        Acknowedgements
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requirements" class="md-nav__link">
+    Pre-Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-host" class="md-nav__link">
+    Build Host
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Host">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1604-1804-and-debian-gnulinux-8x-10x" class="md-nav__link">
+    Ubuntu (16.04 -18.04) and Debian GNU/Linux (8.x-10.x)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora-28-32" class="md-nav__link">
+    Fedora (28-32)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centos7x" class="md-nav__link">
+    CentOS(7.x)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opensuse-leap-151" class="md-nav__link">
+    OpenSUSE Leap (15.1)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-mion-sources" class="md-nav__link">
+    Obtaining mion Sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage-of-build-environment" class="md-nav__link">
+    Basic Usage of Build Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-script-examples" class="md-nav__link">
+    Build Script Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-creation" class="md-nav__link">
+    Image Creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-process" class="md-nav__link">
+    Build Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="getting-started-guide">Getting Started Guide</h1>
+<h2 id="pre-requirements">Pre-Requirements</h2>
+<blockquote>
+<p>This documentation is for mion dunfell-2021.06 "Dernish" release</p>
+</blockquote>
+<p>If you are new to Yocto Project development, check out <a href="https://www.yoctoproject.org/docs/3.1.3/overview-manual/overview-manual.html">Overview and Concepts</a>
+and the <a href="https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html">Quick Build</a>
+guide to set up your build host and become familiar with the workflow. We
+provide a quick overview below. Already familiar and want to get started
+building mion? Then check out the mion <a href="https://github.com/NetworkGradeLinux/mion">README</a>
+for a quick-start guide.</p>
+<h2 id="build-host">Build Host</h2>
+<p>Whether on a laptop or a high-powered build server, make sure that...</p>
+<ul>
+<li>You have 50 GB available</li>
+</ul>
+<blockquote>
+<p><em>Why so much when the resulting image is so tiny? Think of it as a small cake;
+Even if the end result can fit in a small box, you will still need a whole
+kitchen in order to bake it.</em></p>
+</blockquote>
+<ul>
+<li>
+<p>git 1.8.3.1 or greater</p>
+</li>
+<li>
+<p>tar 1.28 or greater</p>
+</li>
+<li>
+<p>python 3.5.0 or greater</p>
+</li>
+<li>
+<p>gcc 5.0 or greater</p>
+</li>
+</ul>
+<h3 id="ubuntu-1604-1804-and-debian-gnulinux-8x-10x">Ubuntu (16.04 -18.04) and Debian GNU/Linux (8.x-10.x)</h3>
+<pre><code class="language-shell">sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+     build-essential chrpath socat cpio python3 python3-pip python3-pexpect \
+     xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa \
+     libsdl1.2-dev pylint3 xterm
+</code></pre>
+<blockquote>
+<p>for Ubuntu, make sure that you are using bash rather than dash:
+<code>sudo dpkg-reconfigure dash</code> select <code>No</code> to use bash.</p>
+</blockquote>
+<h3 id="fedora-28-32">Fedora (28-32)</h3>
+<pre><code class="language-shell">sudo dnf install gawk make wget tar bzip2 gzip python3 unzip perl patch \
+     diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath \
+     ccache perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue perl-bignum\
+     socat python3-pexpect findutils which file cpio python python3-pip xz \
+     python3-GitPython python3-jinja2 SDL-devel xterm rpcgen
+</code></pre>
+<h3 id="centos7x">CentOS(7.x)</h3>
+<pre><code class="language-shell">$ sudo yum install -y epel-release
+$ sudo yum makecache
+$ sudo yum install gawk make wget tar bzip2 gzip python3 unzip perl patch \
+     diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath socat \
+     perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue python36-pip xz \
+     which SDL-devel xterm
+
+$ sudo pip3 install GitPython jinja2
+</code></pre>
+<h3 id="opensuse-leap-151">OpenSUSE Leap (15.1)</h3>
+<pre><code class="language-shell">sudo zypper install python gcc gcc-c++ git chrpath make wget python-xml \
+     diffstat makeinfo python-curses patch socat python3 python3-curses tar \
+     python3-pip python3-pexpect xz which python3-Jinja2 Mesa-libEGL1 \
+     libSDL-devel xterm rpcgen
+
+$ sudo pip3 install GitPython
+</code></pre>
+<p><em>The above requirements and build host packages are originally from Yocto
+Project Quick Build Copyright 2010-2020 Linux Foundation, under the
+<a href="https://creativecommons.org/licenses/by-sa/2.0/uk/">Creative Commons Attribution-Share Alike 2.0 UK: England &amp; Wales</a>.
+We added the cake.</em></p>
+<h2 id="obtaining-mion-sources">Obtaining mion Sources</h2>
+<p>You're almost ready! Now obtain the <em>required</em> mion bitbake layers. Use either
+the script <code>mion/contrib/clone_mion_repos.sh</code>, which clones all the
+main public mion repos with a single command, or manually as shown below.</p>
+<pre><code class="language-shell"># To clone the submodules, `--recursive` is required
+git clone --recursive https://github.com/NetworkGradeLinux/mion.git
+cd mion
+# To obtain mion distro layer:
+git clone https://github.com/NetworkGradeLinux/meta-mion.git
+# Obtain the mion hardware layers
+git clone https://github.com/NetworkGradeLinux/meta-mion-bsp.git
+# Backports for upstream repos not currently in the LTS release
+git clone https://github.com/NetworkGradeLinux/meta-mion-backports.git
+</code></pre>
+<p><code>mion</code> provides the build script (cronie.sh) and configuration files in
+<code>build/conf/</code>. The <code>meta-mion</code> layer provides mion distro configuration, and
+<code>meta-mion-bsp</code> is where support and configuration is found.
+<a href="../resources/">Resources</a> provides a detailed listing of all active mion repos.</p>
+<h2 id="basic-usage-of-build-environment">Basic Usage of Build Environment</h2>
+<p>To begin, set up the build environment using the OpenEmbedded init script:</p>
+<pre><code class="language-shell">source openembedded-core/oe-init-build-env
+</code></pre>
+<p>This will place you in the <code>build</code> directory.
+Afterwords you can use our build script. Running <code>../cronie.sh</code> without
+arguments displays basic usage. <strong>In general:</strong></p>
+<pre><code class="language-shell">../cronie.sh -m &lt;machine&gt; &lt;image&gt;
+</code></pre>
+<p><strong>NOTE: The \&lt;image> argument must be provided last</strong></p>
+<p>To do a "dry run" without running a build, add <code>-e</code> which emits what would have
+run if you ran this from bitbake.</p>
+<blockquote>
+<p>Note: The script can not always determine the vendor name, if you encounter
+that issue, or just want to be sure, you can use <code>-v &lt;VENDOR&gt;</code> to specify.</p>
+</blockquote>
+<h2 id="build-script-examples">Build Script Examples</h2>
+<pre><code class="language-shell">
+# Builds an ONLPV1 image onie image
+../cronie.sh -m stordis-bf2556x-1t mion-onie-image-onlpv1
+
+# Builds a QEMU with ONLPV1
+../cronie.sh -v qemu -m qemux86-64 mion-image-onlpv1
+
+</code></pre>
+<h2 id="image-creation">Image Creation</h2>
+<p>Once you've gone through the pre-requirements, have your build host set up, and
+looked at the build script examples, you're ready to create an image yourself.</p>
+<p>When you run <code>cronie.sh</code>, bitbake gets called, first parsing all
+the recipes and making sure your <code>local.conf</code> and <code>bblayers.conf</code> looks good.
+Next, bitbake gets to work "baking" your image!</p>
+<p><img alt="image of build start" src="../assets/images/build_config.png" /></p>
+<blockquote>
+<p>Much like a multilayer cake, how fast it gets finished is going to depend on
+the quantity and complexities of the layers, and how reliable your baking setup
+is!</p>
+</blockquote>
+<p><img alt="image of in progress build" src="../assets/images/build_config_init_running.png" /></p>
+<p>While you enjoy a relaxing break, keep an eye on the screen for something like
+this:</p>
+<p><img alt="completed image" src="../assets/images/build_done.png" /></p>
+<p>From the build directory, you'll find the finished images and related items such
+as the onie-installer in <code>tmp-glibc/deploy/images/&lt;VENDOR&gt;-&lt;MACHINE&gt;/</code></p>
+<h3 id="build-process">Build Process</h3>
+<p>Plan on the initial run to take some time, with following builds being much
+less. For a Linux VM with V Virtual CPUs and 32G RAM, a build will likely break
+down as follows:</p>
+<ul>
+<li>
+<p><em>Fetching sources and setting up build environment</em>: <strong>5 minutes</strong></p>
+</li>
+<li>
+<p><em>Building of the image</em>: <strong>3 hours</strong></p>
+</li>
+<li>
+<p><em>Deploying mion via ONIE</em>: <strong>5 minutes per switch</strong></p>
+</li>
+</ul>
+<p>You're finally done with this guide? Now it's time for
+<a href="../installing-mion/">Installing mion</a>!</p>
+<p>If you've built the qemu image, from the build directory,
+<code>runqemu tmp-glibc/deploy/images/qemux86-64/</code></p>
+<blockquote>
+<p>runqemu may require setting up a tap interface. See <code>meta-mion-qemu/README</code>
+for more information.</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../installing-mion/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Installing mion
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": {"method": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+        <script src="../js/version-select.js"></script>
+      
+    
+  </body>
+</html>
