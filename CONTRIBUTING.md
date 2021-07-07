@@ -4,12 +4,13 @@ Welcome to mion-docs! Here you can find info on how to contribute to mion-docs.
 If you want to contribute to another part of the project, please see the general
 [contributing documentation](https://github.com/NetworkGradeLinux/mion/blob/dunfell/CONTRIBUTING.md).
 
-Previously, contributing to mion-docs required following a workflow very similar
-to the other repositories. This approach is still encouraged, especially if
-you're new to our workflow or contributing to open source. However, if you need
-to just submit a change and are already set up on GitHub, submit a pull
-request from a branch or fork, or send the docs-maintainer a patch when you're
-done, and once approved, the gh-pages branch will be updated by the maintainer.
+Contributing to mion-docs following a
+[workflow](https://github.com/NetworkGradeLinux/mion-docs/wiki/Git-Workflow)
+similar to the other repositories is encouraged, especially if you're new to our
+workflow. However, if you need to just submit a change and are already set up on
+GitHub, submit a pull request from a branch or fork, or send the docs-maintainer
+a patch when you're done, and once approved, the gh-pages branch will be updated
+by the maintainer.
 
 Want to know how to preview changes to `docs.mion.io` on your computer? Or how
 to get started with git?  What if you're new to our community and want to get
@@ -59,10 +60,9 @@ tend to be easier bugs for newcomers to work on.
 ## Setup
 
 This section assumes that you are at least a little familiar with git and
-using a command line interface on a Linux distro or macOS. However, you can
-still contribute if you're not; if you need help with other environments, or
-using any tools, get in touch with [us](#maintainer-contact) and we can
-offer assistance.
+using a command line interface. However, you can still contribute if you're not;
+if you need help using any tools, get in touch with [us](#maintainer-contact)
+and we can offer assistance.
 
 In any of the following examples the command line/terminal, lines that start
 with `#` are comments, so don't worry about them if you want to copy/paste.
