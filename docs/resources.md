@@ -20,7 +20,11 @@
   Recipes backported from other Yocto project repos, such as K3s support
 * [meta-mion-unsupported](https://github.com/NetworkGradeLinux/meta-mion-unsupported);
   layers which are not currently supported, such as `meta-mion-simplerunc`
-
+* [mion-docs](https://github.com/NetworkGradeLinux/mion-docs); our main
+  documentation source, where the pages on <https://docs.mion.io/> come from.
+  Documentation is a great place to get started and gain practice with our
+  workflow!
+  
 ## Yocto Project and OpenEmbedded
 
 * [The Yocto Project](https://www.yoctoproject.org/); Build environment and
