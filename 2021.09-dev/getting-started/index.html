@@ -827,9 +827,11 @@ Afterwords you can use our build script. Running <code>../cronie.sh</code> witho
 arguments displays basic usage. <strong>In general:</strong></p>
 <pre><code class="language-shell">../cronie.sh -m &lt;machine&gt; &lt;image&gt;
 </code></pre>
-<p><strong>NOTE: The \&lt;image> argument must be provided last</strong></p>
+<p>Argument <code>&lt;image&gt;</code> must be provided last, as following arguments
+would be passed to bitbake as part of the image name.</p>
 <p>To do a "dry run" without running a build, add <code>-e</code> which emits what would have
-run if you ran this from bitbake.</p>
+run if you ran this from bitbake. For bitbake to attempt continuing in the
+case of a build error, add <code>-k</code>.</p>
 <blockquote>
 <p>Note: The script can not always determine the vendor name, if you encounter
 that issue, or just want to be sure, you can use <code>-v &lt;VENDOR&gt;</code> to specify.</p>
