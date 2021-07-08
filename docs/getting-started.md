@@ -119,10 +119,12 @@ arguments displays basic usage. **In general:**
 ../cronie.sh -m <machine> <image>
 ```
 
-**NOTE: The \<image\> argument must be provided last**
+Argument `<image>` must be provided last, as following arguments
+would be passed to bitbake as part of the image name.
 
 To do a "dry run" without running a build, add `-e` which emits what would have
-run if you ran this from bitbake.
+run if you ran this from bitbake. For bitbake to attempt continuing in the
+case of a build error, add `-k`.
 
 > Note: The script can not always determine the vendor name, if you encounter
 that issue, or just want to be sure, you can use `-v <VENDOR>` to specify.
