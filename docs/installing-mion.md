@@ -6,7 +6,7 @@ machine configuration.
 
 ## Image types
 
-* ONIE compliant images (`<image_name>.bin`): install on a switch with ONIE
+* ONIE compliant images (`onie-installer.bin`): install on a switch with ONIE
   installed
 
 ## Mender (DEPRECATED)
@@ -19,8 +19,6 @@ Mender images are no longer included **after**
 The ONIE image can be installed on the system using any
 [ONIE supported installation method](https://opencomputeproject.github.io/onie/user-guide/index.html).
 
-> We recommend that you use a TFTP server with a known hostname for installation
-however other options can be used.
-
-ONIE will be installed alongside other OS and will automatically update the boot
-options. **ONIE images do not currently support the simple-runc container system**
+*NOTE: Installation issues have been observed when using older versions of ONIE
+so it is reccomended to make sure that a relitively recent version of ONIE has
+been installed on the switch before attemtping to install mion*
