@@ -596,21 +596,20 @@ in <code>build/tmp-glibc/deploy/images/&lt;MACHINE&gt;/</code>. Files may differ
 machine configuration.</p>
 <h2 id="image-types">Image types</h2>
 <ul>
-<li>ONIE compliant images (<code>&lt;image_name&gt;.bin</code>): install on a switch with ONIE
+<li>ONIE compliant images (<code>onie-installer.bin</code>): install on a switch with ONIE
   installed</li>
 </ul>
 <h2 id="mender-deprecated">Mender (DEPRECATED)</h2>
 <p>Mender images are no longer included <strong>after</strong>
 <a href="https://docs.mion.io/2021.03/installing_mion/">"Copeland"</a>.</p>
 <h2 id="onie">ONIE</h2>
-<p>The ONIE image can be installed on the system using any
-<a href="https://opencomputeproject.github.io/onie/user-guide/index.html">ONIE supported installation method</a>.</p>
 <blockquote>
-<p>We recommend that you use a TFTP server with a known hostname for installation
-however other options can be used.</p>
+<p>Installation issues have been observed when using older versions of ONIE.
+Check that a relatively recent version of ONIE has been installed on the switch
+before attempting to install mion.</p>
 </blockquote>
-<p>ONIE will be installed alongside other OS and will automatically update the boot
-options. <strong>ONIE images do not currently support the simple-runc container system</strong></p>
+<p>The ONIE image can be installed on the system using any
+<a href="https://opencomputeproject.github.io/onie/user-guide/index.html">ONIE supported installation methods</a>.</p>
                 
               
               
